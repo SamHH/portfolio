@@ -107,6 +107,22 @@ header {
 			}
 			&:nth-child(3) {
 				color: $md-grey-500;
+				#jsJobTitleText {
+					cursor: pointer;
+					animation: colorHighlight 3s ease infinite;
+
+					@keyframes colorHighlight {
+						0% {
+							color: inherit;
+						}
+						50% {
+							color: $md-grey-400;
+						}
+						100% {
+							color: inherit;
+						}
+					}
+				}
 			}
 		}
 

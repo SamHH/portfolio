@@ -18,7 +18,7 @@
 
 					<h1>Sam A. Horvath-Hunt</h1>
 
-					<h5>A web developer from London, UK</h5>
+					<h5>A <span id="jsJobTitleText">web developer</span> from London, UK</h5>
 
 					<hr>
 
