@@ -202,7 +202,6 @@ main {
 
 	.alternating-sides {
 		padding: 2rem;
-		border-bottom: 0.1rem solid $md-grey-300;
 		background-image: url('../assets/images/pattern-diamonds.png');
 		@include smart-center(horizontal, relative);
 

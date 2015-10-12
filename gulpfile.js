@@ -72,7 +72,7 @@ gulp.task('default', ['browser-sync', 'watch']);
 
 gulp.task('browser-sync', ['sass-process-minify'], function() {
 	browserSync({
-		proxy: 'localhost:4567',
+		proxy: 'localhost:4568',
 		files: ['css/style.css', 'js/main.js', '*.php']
 	});
 });
