@@ -13,7 +13,7 @@
 
 			<a href="404.php"><li>Projects</li></a>
 
-			<a href="404.php"><li>C.V.</li></a>
+			<a href="404.php"><li>Expertise</li></a>
 
 			<a href="404.php"><li>Contact</li></a>
 

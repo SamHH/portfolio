@@ -1,25 +1,3 @@
-.notice-unsupported {
-	display: none;
-	padding: 0.8rem;
-	font-size: 1.6rem;
-	background-color: $md-yellow-500;
-	border: 0.75rem solid darken($md-yellow-500, 15%);
-
-	span {
-		float: left;
-		font-size: 5em;
-		margin: 0.7rem 1.5rem 0 0.7rem;
-	}
-
-	a {
-		font-weight: bold;
-
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-}
-
 header {
 	background-image: url("../assets/images/landing.jpg");
 	background-size: cover;

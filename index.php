@@ -4,10 +4,6 @@
 
 	<body>
 
-		<?php
-			require("content_unsupported.php");
-		?>
-
 		<header>
 
 			<?php
