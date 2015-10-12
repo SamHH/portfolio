@@ -30,7 +30,7 @@
 
 		<main>
 
-			<section class="highlighted-block">
+			<section class="quotes-block">
 
 				<div class="width-limiter">
 
@@ -64,7 +64,7 @@
 
 			</section>
 
-			<section class="alternating-sides">
+			<section class="alternating-sides-block">
 
 				<div class="width-limiter">
 
@@ -104,7 +104,7 @@
 
 					<div class="button-wrapper">
 
-						<a href="404.php"><button>View my past experience</button></a>
+						<a href="404.php"><button>Download curriculum vitae</button></a>
 
 						<a href="404.php"><button>Enquire about private work</button></a>
 

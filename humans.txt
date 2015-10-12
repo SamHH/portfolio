@@ -4,7 +4,7 @@ Site (you're already here!): http://samhh.com
 Location: London, UK
 
 /* SITE */
-Standards: HTML5, CSS3 (Sass/SCSS), JavaScript (jQuery + various plugins), PHP
+Standards: HTML5, CSS3 (Sass/SCSS), JavaScript (incl/ jQuery + particles.js), PHP
 Tools: Sublime Text 3, Gulp, Bower
 
 /*  THANKS */

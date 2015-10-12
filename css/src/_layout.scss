@@ -13,9 +13,17 @@ header {
 		position: fixed;
 		top: 0;
 		z-index: 10;
-		border-bottom: 0.1rem solid $md-grey-200;
-		background-color: white;
 		font-size: 1.35rem;
+		transition: all .2s ease-in-out;
+
+		&.active {
+			background-color: white;
+			border-bottom: 0.1rem solid $md-grey-200;
+
+			li {
+				color: initial;
+			}
+		}
 
 		.nav__logo {
 			max-height: 5rem;
@@ -59,6 +67,7 @@ header {
 				padding: 1rem 1rem 1.2rem;
 				margin: 0.8rem 0.5rem;
 				font-family: "Montserrat";
+				color: white;
 				position: relative;
 
 				&:after {
@@ -88,14 +97,12 @@ header {
 	/* Title / Landing
 	   ========================================================================== */
 	.title {
-		margin: 10.5rem 0 0;
-		padding: 10rem 2rem;
+		padding: 20.5rem 2rem 10rem;
 		text-align: center;
 		color: white;
 
 		@include break-tablet {
-			margin-top: 5.5rem;
-			padding: 14rem 2rem;
+			padding: 19.5rem 2rem 14rem;
 		}
 
 		h1, h5 {
@@ -160,102 +167,102 @@ main {
 		border: 0;
 		background-color: $color-secondary;
 	}
+}
 
-	.highlighted-block {
-		padding: 2rem;
-		background-color: $color-primary;
-		color: white;
-		@extend %clearfix;
+.quotes-block {
+	padding: 2rem;
+	background-color: $color-primary;
+	color: white;
+	@extend %clearfix;
 
-		blockquote {
-			margin: 1.5rem 0 2.5rem;
+	blockquote {
+		margin: 1.5rem 0 2.5rem;
 
-			@include break-desktop {
-				width: 33.333%;
-				padding: 0 2rem;
-				float: left;
+		@include break-desktop {
+			width: 33.333%;
+			padding: 0 2rem;
+			float: left;
+		}
+
+		p {
+			background-color: darken($color-primary, 7.5%);
+			color: $md-grey-400;
+			padding: 0.5rem 1.5rem;
+			margin: 1rem 0;
+			border-radius: 0.8rem 0 0.8rem 0;
+
+			&:before, &:after {
+				color: white;
+				font-size: 2rem;
+				line-height: 1.6rem;
 			}
 
-			p {
-				background-color: darken($color-primary, 7.5%);
-				color: $md-grey-400;
-				padding: 0.5rem 1.5rem;
-				margin: 1rem 0;
-				border-radius: 0.8rem 0 0.8rem 0;
-
-				&:before, &:after {
-					color: white;
-					font-size: 2rem;
-					line-height: 1.6rem;
-				}
-
-				&:before {
-					content: '“ ';
-				}
-
-				&:after {
-					content: ' ”';
-				}
+			&:before {
+				content: '“ ';
 			}
 
-			cite a {
-				text-decoration: underline;
+			&:after {
+				content: ' ”';
 			}
+		}
+
+		cite a {
+			text-decoration: underline;
+		}
+	}
+}
+
+.alternating-sides-block {
+	padding: 2rem;
+	background-image: url('../assets/images/pattern-diamonds.png');
+	@include smart-center(horizontal, relative);
+
+	.block {
+		width: 100%;
+		padding: 1.5rem 0;
+		margin: 2rem auto 5rem;
+		border-radius: 0.5rem;
+
+		&:nth-child(2n+1) {
+			text-align: right;
+		}
+
+		@include break-desktop {
+			width: 33.333%;
+			padding: 0 2rem;
+			float: left;
+
+			&:nth-child(3n+1) {
+				text-align: left;
+			}
+
+			&:nth-child(3n+2) {
+				text-align: center;
+			}
+
+			&:nth-child(3n+3) {
+				text-align: right;
+			}
+		}
+
+		h3 {
+			margin: 1.5rem 0 0.5rem;
+			color: $color-accent;
 		}
 	}
 
-	.alternating-sides {
-		padding: 2rem;
-		background-image: url('../assets/images/pattern-diamonds.png');
-		@include smart-center(horizontal, relative);
+	.button-wrapper {
 
-		.block {
-			width: 100%;
-			padding: 1.5rem 0;
-			margin: 2rem auto 5rem;
-			border-radius: 0.5rem;
+		@include break-desktop {
+			display: flex;
 
-			&:nth-child(2n+1) {
-				text-align: right;
-			}
-
-			@include break-desktop {
-				width: 33.333%;
-				padding: 0 2rem;
-				float: left;
-
-				&:nth-child(3n+1) {
-					text-align: left;
-				}
-
-				&:nth-child(3n+2) {
-					text-align: center;
-				}
-
-				&:nth-child(3n+3) {
-					text-align: right;
-				}
-			}
-
-			h3 {
-				margin: 1.5rem 0 0.5rem;
-				color: $color-accent;
+			button {
+				width: initial;
 			}
 		}
 
-		.button-wrapper {
-
-			@include break-desktop {
-				display: flex;
-
-				button {
-					width: initial;
-				}
-			}
-
-			button {
-				width: 100%;
-			}
+		button {
+			width: 100%;
 		}
 	}
 }
