@@ -208,7 +208,7 @@ main {
 		.block {
 			width: 100%;
 			padding: 1.5rem 0;
-			margin: 1.5rem auto;
+			margin: 2rem auto 5rem;
 			border-radius: 0.5rem;
 
 			&:nth-child(2n+1) {
@@ -237,12 +237,6 @@ main {
 				margin: 1.5rem 0 0.5rem;
 				color: $color-accent;
 			}
-		}
-
-		> h3 {
-			width: 100%;
-			text-align: center;
-			margin: 1.5rem 0;
 		}
 
 		.button-wrapper {
