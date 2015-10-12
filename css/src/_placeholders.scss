@@ -1,0 +1,51 @@
+/* remove the ability to highlight stuff */
+%no-select {
+	user-select: none;
+}
+
+/* from: http://cssmojo.com/latest_new_clearfix_so_far/ */
+%clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+button {
+	padding: 1rem;
+	margin: 1.25rem 0;
+	border: 0.1rem solid $md-grey-400;
+	background-color: white;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	border-radius: 0.3rem;
+	transition: all 150ms ease-in-out;
+	font-family: 'Montserrat';
+
+	&:hover {
+		background-color: $color-primary;
+		border-color: $color-primary;
+		color: white;
+	}
+}
+
+.alternate-colors {
+	text-align: center;
+
+	span {
+		&:nth-child(3n+1) {
+			color: $color-secondary;
+		}
+		&:nth-child(3n+2) {
+			color: $color-primary;
+		}
+		&:nth-child(3n+3) {
+			color: $color-accent;
+		}
+	}
+}
+
+.width-limiter {
+	max-width: $max-site-width;
+}

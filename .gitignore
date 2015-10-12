@@ -1,0 +1,19 @@
+# Some directories such as those from Bower and Composer need to be pulled by the server automatically. Alas, our servers and deployment setup aren't that complex (yet), but that's what we're working with for the sake of keeping the version control clean
+
+# NPM
+node_modules/
+
+# Bower
+bower_components/
+
+# Composer
+vendor/
+composer.lock
+
+# Misc
+.DS_Store
+assets/
+css/style.css
+css/style.css.map
+js/main.js
+js/main.js.map

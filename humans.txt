@@ -1,0 +1,12 @@
+/* DEV */
+Name: Sam A. Horvath-Hunt
+Site (you're already here!): http://samhh.com
+Location: London, UK
+
+/* SITE */
+Standards: HTML5, CSS3 (Sass/SCSS), JavaScript (jQuery + various plugins), PHP
+Tools: Sublime Text 3, Gulp, Bower
+
+/*  THANKS */
+- Whoever made the background in use on the landing page **will find this at a later date
+- Everyone who contributed towards all the tools and standards in use above

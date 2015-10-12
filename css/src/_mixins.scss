@@ -1,0 +1,99 @@
+/**
+* Description: Mixins for use in development.
+* Check Git for authorship and edits information.
+*
+* Contents:
+*	0. Smart Center
+*	1. Inline Media Queries
+*/
+
+/* ==========================================================================
+   0. Smart Center
+   ========================================================================== */
+
+/**
+ * Uses transform:translate() to center items horizontally and/or vertically. There is also a reset function available.
+ *
+ * Example usage:
+ *
+ * .selector {
+ *		@include smart-center(horizontal, relative);
+ *	 }
+ *	.selected-reset {
+ *		@include smart-center(reset);
+ *	}
+ *
+ * #1 These values are the defaults if no values provided.
+ * #2 Defining these null here else they will have local scope tied to the @if statements.
+ */
+
+@mixin smart-center($direction: "x", $position-type: "relative") { // #1
+
+	$direction-top: null; // #2
+	$direction-left: null; // #2
+	$direction-translate-type: null; // #2
+
+	@if $direction == "reset" {
+		$direction-top: initial !important;
+		$direction-left: initial !important;
+		$direction-translate-type: initial !important;
+		$position-type: initial !important;
+	}
+	@else if $direction == "horizontal" or $direction == "x" {
+ 		$direction-left: 50%;
+ 		$direction-translate-type: translateX(-50%);
+	}
+	@else if $direction == "vertical" or $direction == "y" {
+ 		$direction-top: 50%;
+ 		$direction-translate-type: translateY(-50%);
+	}
+	@else if $direction == "both" or $direction == "xy" {
+ 		$direction-top: 50%;
+ 		$direction-left: 50%;
+ 		$direction-translate-type: translate(-50%, -50%);
+	}
+
+	@if $direction-top != null {
+		top: $direction-top;
+	}
+	@if $direction-left != null {
+		left: $direction-left;
+	}
+	transform: $direction-translate-type;
+	position: $position-type;
+}
+
+/* ==========================================================================
+   1. Inline Media Queries
+   ========================================================================== */
+
+/**
+ * Allows media query properties to be applied inline alongside the standard styles (see: http://davidwalsh.name/write-media-queries-sass).
+ *
+ * Minimum mobile size is set in the body, typically 320px.
+ *
+ * Example usage:
+ *
+ * .selector {
+ *		width: 100%;
+ *
+ *		@include break-tablet {
+ *			width: 50%;
+ *		}
+ *
+ *		@include break-desktop {
+ *			width: 25%;
+ *		}
+ *	}
+ */
+
+@mixin break-tablet {
+	@media (min-width: 640px) {
+		@content;
+	}
+}
+@mixin break-desktop {
+	@media (min-width: 960px) {
+		@content;
+	}
+}
