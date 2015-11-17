@@ -7,12 +7,12 @@
 			this.bindEvents();
 		},
 		cacheDom() {
-			this.nav = document.getElementsByTagName('nav');
-			this.fold = document.getElementsByClassName('title');
+			this.nav = document.getElementById('jsNav');
+			this.fold = document.getElementById('jsFold');
 		},
 		getStyles() {
-			var navStyles = window.getComputedStyle(this.nav[0]);
-			var foldStyles = window.getComputedStyle(this.fold[0]);
+			var navStyles = window.getComputedStyle(this.nav);
+			var foldStyles = window.getComputedStyle(this.fold);
 			this.hitboxSize = parseInt(foldStyles.getPropertyValue('padding-top')) - parseInt(navStyles.getPropertyValue('height'));
 			this.navColorActivateClassName = 'active';
 		},
@@ -21,9 +21,9 @@
 		},
 		updateHeader() {
 			if (window.pageYOffset > this.hitboxSize) {
-				this.nav[0].classList.add(this.navColorActivateClassName);
+				this.nav.classList.add(this.navColorActivateClassName);
 			} else {
-				this.nav[0].classList.remove(this.navColorActivateClassName);
+				this.nav.classList.remove(this.navColorActivateClassName);
 			}
 		}
 	};

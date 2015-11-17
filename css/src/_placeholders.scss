@@ -1,9 +1,9 @@
-/* remove the ability to highlight stuff */
+// Remove the ability to highlight stuff
 %no-select {
 	user-select: none;
 }
 
-/* from: http://cssmojo.com/latest_new_clearfix_so_far/ */
+// From: http://cssmojo.com/latest_new_clearfix_so_far/
 %clearfix {
 	&:after {
 		content: "";
@@ -15,7 +15,7 @@
 button {
 	padding: 1rem;
 	margin: 1.25rem 0;
-	border: 0.1rem solid $md-grey-400;
+	border: 0.1rem solid $md-grey-300;
 	background-color: white;
 	text-transform: uppercase;
 	font-size: 1.5rem;

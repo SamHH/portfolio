@@ -1,8 +1,8 @@
-<nav>
+<nav class="landing__navbar" id="jsNav">
 
 	<div class="width-limiter">
 
-		<ul>
+		<ul class="landing__navbar__list">
 
 			<a href="404.php"><li class="active">Home</li></a>
 

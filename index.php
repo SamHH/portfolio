@@ -4,13 +4,13 @@
 
 	<body>
 
-		<header>
+		<header class="landing">
 
 			<?php
 				require("content_nav.php");
 			?>
 
-			<section class="title">
+			<section class="landing__title" id="jsFold">
 
 				<div class="width-limiter">
 
@@ -72,7 +72,7 @@
 
 					<div>
 
-						<div class="block">
+						<div class="alternating-sides-block__chunk">
 
 							<h3>Consult</h3>
 
@@ -80,7 +80,7 @@
 
 						</div>
 
-						<div class="block">
+						<div class="alternating-sides-block__chunk">
 
 							<h3>Design</h3>
 
@@ -88,7 +88,7 @@
 
 						</div>
 
-						<div class="block">
+						<div class="alternating-sides-block__chunk">
 
 							<h3>Develop</h3>
 
