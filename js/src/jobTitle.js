@@ -1,7 +1,22 @@
-var target = document.getElementById('jsJobTitleText');
+(function() {
 
-target.onclick = function() {
-	this.innerHTML = 'full-stack web developer specialising in frontend';
-	this.style.animation = 'none';
-	this.style.cursor = 'default';
-};
+	var jobTitle = {
+		init() {
+			this.cacheDom();
+			this.bindEvents();
+		},
+		cacheDom() {
+			this.target = document.getElementById('jsJobTitleText');
+		},
+		bindEvents() {
+			this.target.onclick = this.changeText;
+		},
+		changeText() {
+			this.innerHTML = 'full-stack web developer specialising in frontend';
+			this.style.animation = 'none';
+			this.style.cursor = 'default';
+		}
+	};
+	jobTitle.init();
+
+})();
