@@ -20,6 +20,7 @@
 
 	&.active {
 		background-color: white;
+		box-shadow: 0 1px 5px $md-grey-300;
 
 		li {
 			color: initial;
@@ -161,53 +162,72 @@ main {
 	}
 }
 
-.quotes-block {
+.general-block {
 	padding: 2rem;
 	background-color: $color-primary;
 	color: white;
 	@extend %clearfix;
 
-	blockquote {
-		margin: 1.5rem 0 2.5rem;
+	p {
+		display: inline-block;
+		background-color: darken($color-primary, 7.5%);
+		color: $md-grey-300;
+		padding: 0.5rem 1.5rem;
+		margin: 1rem 0 2.5rem;
+		border-radius: 0.8rem 0 0.8rem 0;
 
-		@include break-desktop {
-			width: 33.333%;
-			padding: 0 2rem;
-			float: left;
+		a {
+			color: $md-cyan-100;
+		}
+	}
+
+	form {
+		max-width: 50rem;
+		padding: 2rem;
+		border-radius: 0.5rem;
+		background-color: white;
+		color: black;
+		text-align: center;
+		transition: opacity .5s; // To be altered by JavaScript
+
+		input, textarea {
+			width: 100%;
+			display: block;
+			margin: 1.5rem 0;
+			padding: 0.5rem 1rem;
+			border-radius: 0.2rem;
+			border: 1px solid $md-grey-200;
+			box-shadow: 0 1px 5px $md-grey-200;
+			font-size: 1.75rem;
+			transition: background-color .2s;
+
+			&:focus {
+				outline: none;
+				background-color: $md-grey-50;
+			}
 		}
 
-		p {
-			background-color: darken($color-primary, 7.5%);
-			color: $md-grey-400;
-			padding: 0.5rem 1.5rem;
-			margin: 1rem 0;
-			border-radius: 0.8rem 0 0.8rem 0;
-
-			&:before, &:after {
-				color: white;
-				font-size: 2rem;
-				line-height: 1.6rem;
-			}
-
-			&:before {
-				content: '“ ';
-			}
-
-			&:after {
-				content: ' ”';
-			}
-		}
-
-		cite a {
-			text-decoration: underline;
+		textarea {
+			max-width: 100%; // Else it will be possible to expand across outside of container
+			min-height: 15rem;
 		}
 	}
 }
 
+// Top value to be provided by JavaScript
+.form-notice {
+	display: none; // To be altered by JavaScript
+	position: relative;
+	height: 0; // Prevents its appearance from altering height of container (thereby causing jerkiness)
+	font-size: 1.75rem;
+	text-align: center;
+	opacity: 0; // To be altered by JavaScript
+	transition: opacity .3s ease-in;
+}
+
 .alternating-sides-block {
 	padding: 2rem;
-	background-image: url('../assets/images/pattern-diamonds.png');
-	@include smart-center(horizontal, relative);
+	// @include smart-center(horizontal, relative);
 
 	.button-wrapper {
 
@@ -231,31 +251,43 @@ main {
 	margin: 2rem auto 5rem;
 	border-radius: 0.5rem;
 
-	&:nth-child(2n+1) {
+	&:nth-child(2n+2) {
 		text-align: right;
 	}
 
 	@include break-desktop {
-		width: 33.333%;
+		width: 50%;
 		padding: 0 2rem;
 		float: left;
 
-		&:nth-child(3n+1) {
+		&:nth-child(2n+1) {
 			text-align: left;
+			clear: left;
 		}
 
-		&:nth-child(3n+2) {
-			text-align: center;
-		}
-
-		&:nth-child(3n+3) {
+		&:nth-child(2n+2) {
 			text-align: right;
+		}
+
+		&:last-child {
+			@extend %clearfix;
 		}
 	}
 
 	h3 {
 		margin: 1.5rem 0 0.5rem;
 		color: $color-accent;
+
+		.fa {
+			margin: 0 0 0 0.5rem;
+			font-size: 0.75em;
+			color: $md-grey-400;
+			transition: color .2s;
+
+			&:hover {
+				color: $md-grey-600;
+			}
+		}
 	}
 }
 

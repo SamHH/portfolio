@@ -12,22 +12,8 @@
 	}
 }
 
-button {
-	padding: 1rem;
-	margin: 1.25rem 0;
-	border: 0.1rem solid $md-grey-300;
-	background-color: white;
-	text-transform: uppercase;
-	font-size: 1.5rem;
-	border-radius: 0.3rem;
-	transition: all 150ms ease-in-out;
-	font-family: 'Montserrat';
-
-	&:hover {
-		background-color: $color-primary;
-		border-color: $color-primary;
-		color: white;
-	}
+.clearfix {
+	@extend %clearfix;
 }
 
 .alternate-colors {
@@ -48,4 +34,11 @@ button {
 
 .width-limiter {
 	max-width: $max-site-width;
+}
+
+// Negative top value is determined by JavaScript
+.anchor {
+	display: block;
+	position: relative;
+	visibility: hidden;
 }

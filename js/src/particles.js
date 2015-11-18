@@ -1,4 +1,5 @@
 (function() {
+
   var initialiseParticles = {
     init: function() {
       this.cacheDom();
@@ -34,4 +35,5 @@
     }
   };
   initialiseParticles.init();
+
 })();

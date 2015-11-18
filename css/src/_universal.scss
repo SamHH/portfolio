@@ -64,7 +64,33 @@ ul {
 	padding: 0;
 }
 
-/* can't be css comma'd due to browsers dropping the entire thing upon finding something they don't understand (e.g. prefix) */
+button {
+	padding: 1rem;
+	margin: 1.25rem 0;
+	background-color: $color-secondary;
+	color: white;
+	border: 0;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	border-radius: 0.3rem;
+	transition: all 150ms ease-in-out;
+	font-family: 'Montserrat';
+
+	&:hover {
+		background-color: $color-primary;
+	}
+
+	&:focus {
+		outline: none;
+		background-color: $color-primary;
+	}
+
+	&:active {
+		transform: scale(1.03);
+	}
+}
+
+// Can't be css comma'd due to browsers dropping the entire thing upon finding something they don't understand (e.g. prefix)
 ::selection {
 	background-color: $md-grey-800;
 	color: white;

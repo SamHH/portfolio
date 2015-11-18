@@ -4,13 +4,13 @@
 
 		<ul class="landing__navbar__list">
 
-			<a href="404.php"><li class="active">Home</li></a>
+			<a href="#home"><li class="active">Home</li></a>
 
-			<a href="404.php"><li>Projects</li></a>
+			<a href="#expertise"><li>Expertise</li></a>
 
-			<a href="404.php"><li>Expertise</li></a>
+			<a href="#projects"><li>Projects</li></a>
 
-			<a href="404.php"><li>Contact</li></a>
+			<a href="#contact"><li>Contact</li></a>
 
 		</ul>
 
