@@ -6,4 +6,6 @@
 
 	</div>
 
+	<div id="jsBubbles"></div>
+
 </footer>

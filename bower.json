@@ -16,7 +16,6 @@
   "dependencies": {
     "font-awesome": "~4.3.0",
     "material-colors": "~1.0.0",
-    "normalize.css": "~3.0.2",
-    "particles.js": "~1.1.0"
+    "normalize.css": "~3.0.2"
   }
 }
