@@ -7,6 +7,7 @@
     init() {
       this.cacheDom();
       this.bindEvents();
+      this.checkPosition(); // Run once to activate on page load prior to any scrolling
     },
     cacheDom() {
       this.nav = document.getElementById('jsNav');
@@ -36,7 +37,9 @@
       // If new active tab not already set as active tab
       if (!this.nav.getElementsByTagName('li')[navTab].classList.contains(this.activeTabClassName)) {
         // Remove active state from previously active tab
-        this.nav.getElementsByClassName(this.activeTabClassName)[0].classList.remove(this.activeTabClassName);
+        if (this.nav.getElementsByClassName(this.activeTabClassName).length) {
+          this.nav.getElementsByClassName(this.activeTabClassName)[0].classList.remove(this.activeTabClassName);
+        }
 
         // Add active state to new active tab
         this.nav.getElementsByTagName('li')[navTab].classList.add(this.activeTabClassName);

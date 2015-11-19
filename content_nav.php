@@ -4,7 +4,7 @@
 
 		<ul class="landing__navbar__list">
 
-			<a href="#home"><li class="active">Home</li></a>
+			<a href="#home"><li>Home</li></a>
 
 			<a href="#expertise"><li>Expertise</li></a>
 
