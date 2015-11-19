@@ -38,8 +38,8 @@
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
 
-		<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="bower_components/normalize.css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
 
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 

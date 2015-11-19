@@ -1,5 +1,3 @@
-// TODO: update url too
-
 (function() {
 
   var updateActiveNavByAnchor = {
@@ -11,38 +9,39 @@
     },
     cacheDom() {
       this.nav = document.getElementById('jsNav');
-      this.anchors = document.getElementsByClassName('anchor');
+      this.anchors = Array.from(document.getElementsByClassName('anchor'));
     },
     bindEvents() {
-      document.addEventListener('scroll', this.checkPosition.bind(this));
+      document.addEventListener('scroll', _.throttle(this.checkPosition.bind(this), 500));
     },
     checkPosition() {
-      var furthest = null;
+      let furthest = null;
+
       // If at end of document, use last anchor (as good chance last anchor not big enough to get triggered otherwise)
       if (window.scrollY == document.body.clientHeight - window.innerHeight) {
-        this.setActiveNavTab(this.anchors.length - 1);
+        furthest = this.anchors.length - 1;
       } else {
-        for (var i = 0; i < this.anchors.length; i++) {
+        for (let i = 0; i < this.anchors.length; i++) {
           // If scrolled to or past the anchor position set this as new furthest and move onto next anchor
           if (window.scrollY >= this.anchors[i].offsetTop) {
             furthest = i;
           } else {
-            this.setActiveNavTab(furthest);
             break;
           }
         }
       }
+      this.setActiveNavTab(furthest);
     },
-    setActiveNavTab(navTab) {
+    setActiveNavTab(tabToActiveIndex) {
       // If new active tab not already set as active tab
-      if (!this.nav.getElementsByTagName('li')[navTab].classList.contains(this.activeTabClassName)) {
+      if (!this.nav.getElementsByTagName('li')[tabToActiveIndex].classList.contains(this.activeTabClassName)) {
         // Remove active state from previously active tab
         if (this.nav.getElementsByClassName(this.activeTabClassName).length) {
           this.nav.getElementsByClassName(this.activeTabClassName)[0].classList.remove(this.activeTabClassName);
         }
 
         // Add active state to new active tab
-        this.nav.getElementsByTagName('li')[navTab].classList.add(this.activeTabClassName);
+        this.nav.getElementsByTagName('li')[tabToActiveIndex].classList.add(this.activeTabClassName);
       }
     }
   };

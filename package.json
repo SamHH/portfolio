@@ -20,5 +20,11 @@
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.6.0",
     "lost": "^6.6.2"
+  },
+  "dependencies": {
+    "font-awesome": "^4.4.0",
+    "lodash": "^3.10.1",
+    "material-colors": "^1.0.0",
+    "normalize.css": "^3.0.3"
   }
 }
