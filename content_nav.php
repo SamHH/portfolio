@@ -16,6 +16,8 @@
 
 		<a href="https://github.com/samhh/portfolio" target="_blank"><span class="fa fa-github"></span></a>
 		<a href="https://stackoverflow.com/users/3369753/samhh" target="_blank"><span class="fa fa-stack-overflow"></span></a>
+		<a href="https://linkedin.com/in/samhh" target="_blank"><span class="fa fa-linkedin"
+		></span></a>
 
 	</div>
 
