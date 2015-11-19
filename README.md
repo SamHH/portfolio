@@ -4,7 +4,7 @@ My portfolio site, far from finished! ([samhh.com](http://samhh.com))
 ---
 
 ## Which files aren't in this repository?
-Presently, only one file is absent from this repository - send-email.php - the reason being that it contains my Mailgun API key
+Presently, the only code absent from this repository is a file called send-email.php (called by the AJAX form) - the reason being that it contains my Mailgun API key. The only other non-reproducible file ignored by Git (see: .gitignore) is the landing block image in an ./assets/images/ directory
 
 ## Which technologies are in use here?
 - HTML5
