@@ -18,5 +18,5 @@
       this.header.style.position = 'fixed';
     }
   };
-setFixedHeaderForModernBrowsers.init();
+  setFixedHeaderForModernBrowsers.init();
 })();
