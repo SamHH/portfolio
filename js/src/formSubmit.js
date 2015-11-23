@@ -40,14 +40,14 @@
         var httpRequest = new XMLHttpRequest();
         httpRequest.open('POST', 'send-email.php');
         httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        httpRequest.send('name=' + encodeURIComponent(this.formName.value) + '&email=' + encodeURIComponent(this.formEmail.value) + '&subject=' + encodeURIComponent(this.formSubject.value) + '&message=' + encodeURIComponent(this.formMessage.value));
+        httpRequest.send('name=' + encodeURIComponent(this.formName.value) + '&email=' + encodeURIComponent(this.formEmail.value) + '&subject=' + encodeURIComponent(this.formSubject.value) + '&message=' + encodeURIComponent(this.formMessage.value) + '&ajax=yes');
 
         httpRequest.onreadystatechange = function() {
           if (httpRequest.readyState == 4 && httpRequest.status == 200) {
             if (httpRequest.responseText == 'success') {
               this.removeForm();
             } else {
-              console.log('Email send failed...');
+              console.log('Email send failed: ' + httpRequest.responseText);
             }
           }
         }.bind(this);

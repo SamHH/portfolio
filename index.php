@@ -134,7 +134,7 @@
 			<a class="anchor" name="contact"></a>
 			<section class="general-block" id="jsFormContainer">
 
-				<form id="jsForm">
+				<form id="jsForm" action="send-email.php" method="POST">
 					<h2>Get in touch</h2>
 
 					<label for="name">Name</label>
