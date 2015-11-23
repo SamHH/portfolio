@@ -136,10 +136,19 @@
 
 				<form id="jsForm">
 					<h2>Get in touch</h2>
-					<input type="text" id="jsFormName" placeholder="Your name" required>
-					<input type="email" id="jsFormEmail" placeholder="Your email address (optional)">
-					<input type="text" id="jsFormSubject" placeholder="Subject" required>
-					<textarea id="jsFormMessage" placeholder="Message" required></textarea>
+
+					<label for="name">Name</label>
+					<input type="text" name="name" id="jsFormName" required>
+
+					<label for="email">Email address (optional)</label>
+					<input type="email" name="email" id="jsFormEmail">
+
+					<label for="subject">Subject</label>
+					<input type="text" name="subject" id="jsFormSubject" required>
+
+					<label for="message">Message</label>
+					<textarea name="message" id="jsFormMessage" required></textarea>
+
 					<button type="submit" id="jsFormButton">Send</button>
 				</form>
 

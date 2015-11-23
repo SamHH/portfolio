@@ -194,6 +194,18 @@ main {
 		z-index: 1; // To prevent bubbles from rising over form
 		transition: opacity .5s; // To be altered by JavaScript
 
+		h2 {
+			margin-bottom: 2rem;
+		}
+
+		label {
+			float: left;
+			margin: 1rem 0;
+			font-family: 'Montserrat';
+			font-size: 1.25rem;
+			text-transform: uppercase;
+		}
+
 		input, textarea {
 			width: 100%;
 			display: block;
