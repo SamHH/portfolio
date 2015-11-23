@@ -10,12 +10,11 @@ Presently, the only code absent from this repository is a file called send-email
 - HTML5
 - CSS3 w/ Sass (SCSS syntax)
 - JavaScript w/o jQuery, transpiled using Babel
-- Gulp w/ various other dependencies via npm
-- Bower for frontend dependencies
+- npm for frontend dependencies and Gulp (task-runner)
 - Composer for backend dependencies
 
 ## How do I utilise this repository?
-1. Ensure you have npm (node), Bower and Composer installed globally. Of course you'll need Git installed too. Your server will need to be able to run PHP (minimum version should be around 5.4 approx)
+1. Ensure you have npm (node) and Composer installed globally. Of course you'll need Git installed too. Your server will need to be able to run PHP (minimum version should be around 5.4 approx)
 2. Clone the repo
-3. Run ``npm install && composer install && bower install`` to install all dependencies
+3. Run ``npm install && composer install`` to install all dependencies
 4. Now run ``gulp`` to start the task. Note that this will automatically start a [BrowserSync](http://www.browsersync.io/) instance
