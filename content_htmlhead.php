@@ -4,7 +4,12 @@
 
 		<?php
 
-			$metaDesc = "My name is Sam A. Horvath-Hunt. I am a web developer and this is my personal website.";
+			$metaName = 'Sam A. Horvath-Hunt';
+			$metaSiteName = 'Portfolio';
+			$metaSiteTitle = $metaName . $metaSiteName;
+			$metaThisUrl = 'http://samhh.com';
+			$metaDesc = 'My name is Sam A. Horvath-Hunt. I am a web developer based in London and this website acts as both my portfolio and personal site.';
+			$metaKeywords = 'samhh, sam a. horvath-hunt, sam horvath hunt, sam hunt, sam horvath, sam horvath-hunt, web dev, web development, website development, website developer, web developer, web designer, web design, website design, website designer, clutchhunter, impero, perspective publishing';
 
 		?>
 
@@ -13,22 +18,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<meta name="description" content="<?php echo $metaDesc; ?>">
-		<meta name="keywords" content="samhh, sam a. horvath-hunt, web developer, web design, sam horvath hunt, sam hunt, sam horvath, sam horvath-hunt, clutchhunter, perspective publishing">
+		<meta name="keywords" content="<?php echo $metaKeywords; ?>">
 
 		<!-- Twitter -->
 		<meta name="twitter:card" value="<?php echo $metaDesc; ?>">
-		<meta name="twitter:creator" value="Sam A. Horvath-Hunt">
+		<meta name="twitter:creator" value="<?php echo $metaName; ?>">
 		<!-- <meta name="twitter:image" content="tbc"> -->
 
 		<!-- Schema.org / Google+ -->
-		<meta itemprop="name" content="Sam A. Horvath-Hunt // Portfolio">
+		<meta itemprop="name" content="<?php echo $metaSiteTitle; ?>">
 		<meta itemprop="description" content="<?php echo $metaDesc; ?>">
 		<!-- <meta itemprop="image" content="tbc"> -->
 
 		<!-- Open Graph -->
-		<meta property="og:title" content="Sam A. Horvath-Hunt // Portfolio">
+		<meta property="og:title" content="<?php echo $metaSiteTitle; ?>">
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://samhh.com/portfolio/">
+		<meta property="og:url" content="<?php echo $metaThisUrl; ?>">
 		<!-- <meta property="og:image" content="tbc"> -->
 		<meta property="og:description" content="<?php echo $metaDesc; ?>">
 		<meta property="og:locale" content="en_UK">
