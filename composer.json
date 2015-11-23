@@ -1,5 +1,6 @@
 {
     "require": {
-        "mailgun/mailgun-php": "^1.8"
+        "mailgun/mailgun-php": "^1.8",
+        "vlucas/phpdotenv": "^2.1"
     }
 }
