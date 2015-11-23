@@ -9,7 +9,7 @@
     },
     cacheDom() {
       this.nav = document.getElementById('jsNav');
-      this.anchors = Array.from(document.getElementsByClassName('anchor'));
+      this.anchors = document.getElementsByClassName('anchor');
     },
     bindEvents() {
       document.addEventListener('scroll', _.throttle(this.checkPosition.bind(this), 500));
@@ -18,12 +18,12 @@
       let furthest = null;
 
       // If at end of document, use last anchor (as good chance last anchor not big enough to get triggered otherwise)
-      if (window.scrollY == document.body.clientHeight - window.innerHeight) {
+      if (window.pageYOffset == document.body.clientHeight - window.innerHeight) {
         furthest = this.anchors.length - 1;
       } else {
         for (let i = 0; i < this.anchors.length; i++) {
           // If scrolled to or past the anchor position set this as new furthest and move onto next anchor
-          if (window.scrollY >= this.anchors[i].offsetTop) {
+          if (window.pageYOffset >= this.anchors[i].offsetTop) {
             furthest = i;
           } else {
             break;

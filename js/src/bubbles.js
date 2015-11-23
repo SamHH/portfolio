@@ -20,7 +20,7 @@
     // Presently just triggers once at bottom of page
     // Also doesn't yet remove above scroll event listener and instead uses the this.activated boolean
     checkBubblesVisibility() {
-      if (this.activated === false && window.scrollY === document.body.clientHeight - window.innerHeight) {
+      if (this.activated === false && window.pageYOffset === document.body.clientHeight - window.innerHeight) {
         this.createBubbles();
         this.activated = true;
       }
