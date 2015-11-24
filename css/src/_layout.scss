@@ -273,16 +273,17 @@ main {
 
 	@include break-desktop {
 		width: 50%;
-		padding: 0 2rem;
 		float: left;
 
 		&:nth-child(2n+1) {
 			text-align: left;
 			clear: left;
+			padding: 0 2rem 0 0;
 		}
 
 		&:nth-child(2n+2) {
 			text-align: right;
+			padding: 0 0 0 2rem;
 		}
 
 		&:last-child {
