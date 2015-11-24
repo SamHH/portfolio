@@ -11,7 +11,3 @@ composer.lock
 .DS_Store
 .env
 assets/
-css/style.css
-css/style.css.map
-js/main.js
-js/main.js.map
