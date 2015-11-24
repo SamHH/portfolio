@@ -6,4 +6,4 @@ Location: London, UK
 
 /*  THANKS */
 - Whoever made the background in use on the landing page **will find this at a later date
-- Everyone who contributed towards all the tools and standards in use above
+- Everyone who contributed towards all the tools and standards in use
