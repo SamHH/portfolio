@@ -17,6 +17,7 @@
         this.setNavFixed();
 				this.setStyleVars();
 				this.setNavOffset();
+				this.updateHeaderActiveState(); // Run once to activate on page load prior to any scrolling
 	      this.checkScrollPosRelToAnchors(); // Run once to activate on page load prior to any scrolling
 				this.bindEvents();
       }
