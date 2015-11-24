@@ -31,9 +31,9 @@
 		},
 		bindEvents() {
 			document.addEventListener('scroll', _.throttle(function() { // Throttle prevents these functions from running more often than the time specified in ms
-				this.updateHeaderActiveState.bind(this);
-				this.checkScrollPosRelToAnchors.bind(this);
-			}, 500));
+				this.updateHeaderActiveState();
+				this.checkScrollPosRelToAnchors();
+			}.bind(this), 500));
 		},
 		setNavFixed() {
       this.nav.style.position = 'fixed';
@@ -44,6 +44,7 @@
       }
 		},
 		updateHeaderActiveState() {
+			console.log('triggered');
 			if (window.pageYOffset > this.hitboxSize) {
 				this.nav.classList.add(this.navColorActivateClassName);
 			} else {
