@@ -200,7 +200,6 @@
       }
     },
     updateHeaderActiveState: function updateHeaderActiveState() {
-      console.log('triggered');
       if (window.pageYOffset > this.hitboxSize) {
         this.nav.classList.add(this.navColorActivateClassName);
       } else {
