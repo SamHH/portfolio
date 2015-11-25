@@ -95,13 +95,13 @@ $navItemSideMargin: 0.5rem;
 	}
 
 	svg {
-		width: 3.8rem;
-		padding: 1rem 0.5rem 0.5rem;
+		width: 3.2rem;
+		padding: 1.4rem 0.5rem;
 		fill: white;
 		transition: all .3s;
 
 		&:hover {
-			transform: scale(1.05);
+			transform: scale(1.15);
 		}
 	}
 }
