@@ -52,21 +52,27 @@
 	}
 }
 
+$navItemSideMargin: 0.5rem;
 .landing__navbar__list {
 	list-style-type: none;
-	display: flex;
 
 	@include break-tablet {
 		float: left;
 	}
 
 	li {
+		width: calc(50% - (#{$navItemSideMargin} * 2));
 		padding: 1rem 1rem 1.2rem;
-		margin: 0.8rem 0.5rem;
+		margin: 0.8rem $navItemSideMargin;
+		float: left;
+		text-align: center;
 		font-family: "Montserrat";
 		color: white;
 		position: relative;
-		float: left;
+
+		@include break-tablet {
+			width: auto;
+		}
 
 		&:after {
 			content: "";

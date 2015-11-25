@@ -3,6 +3,7 @@
 }
 
 html {
+	min-width: $min-site-width;
 	font-size: 62.5%; // Sets font sizing to base 10 - http://clagnut.com/blog/348/
 	color: $md-grey-900;
 	cursor: default;
