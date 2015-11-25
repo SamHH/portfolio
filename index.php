@@ -5,13 +5,13 @@
 	<body>
 
 		<a class="anchor" name="home"></a>
-		<header class="landing">
+		<?php
+			require('content_nav.php');
+		?>
 
-			<?php
-				require('content_nav.php');
-			?>
+		<header class="landing-block">
 
-			<section class="landing__title" id="jsFold">
+			<section class="landing-block__title" id="jsFold">
 
 				<div class="width-limiter">
 

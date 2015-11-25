@@ -9,6 +9,63 @@
        (thereby causing jerkiness)
  */
 
+.landing-block {
+	background-image: url('../assets/images/landing.jpg');
+	background-size: cover;
+	text-transform: uppercase;
+}
+
+.landing-block__title {
+	padding: 10rem 2rem;
+	text-align: center;
+	color: white;
+
+	@include break-tablet {
+		padding: 14rem 2rem;
+	}
+
+	h1, h5 {
+		font-weight: 400;
+	}
+
+	h1 {
+		margin: 0;
+		font-size: 4.5rem;
+		font-family: $font-emphasis;
+	}
+
+	h5 {
+		&:nth-child(1) {
+			color: $md-grey-200;
+		}
+		&:nth-child(3) {
+			color: $md-grey-500;
+
+			#jsJobTitleText {
+				cursor: pointer;
+				animation: colorHighlight 3s ease infinite;
+
+				@keyframes colorHighlight {
+					0%, 100% {
+						color: inherit;
+					}
+					50% {
+						color: $md-grey-400;
+					}
+				}
+			}
+		}
+	}
+
+	hr {
+		width: 10rem;
+		height: 0.2rem;
+		margin: 2.5rem auto 0;
+		border: 0;
+		background-color: white;
+	}
+}
+
 .general-block {
 	padding: 2rem;
 	background-color: $color-primary;

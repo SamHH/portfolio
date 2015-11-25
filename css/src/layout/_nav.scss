@@ -1,20 +1,19 @@
 /**
- * Nav / landing header
+ * Nav
  */
 
-.landing {
-	background-image: url('../assets/images/landing.jpg');
-	background-size: cover;
-	text-transform: uppercase;
+#jsFold {
+	padding-top: 20rem;
 }
 
-.landing__navbar {
+.navbar {
 	width: 100%;
 	top: 0;
 	padding: 0 1rem;
 	z-index: 10;
 	font-size: 1.35rem;
 	transition: all .2s ease-in-out;
+	text-transform: uppercase;
 
 	&.active {
 		background-color: white;
@@ -52,7 +51,7 @@
 }
 
 $navItemSideMargin: 0.5rem;
-.landing__navbar__list {
+.navbar__list {
 	list-style-type: none;
 
 	@include break-tablet {
@@ -93,55 +92,5 @@ $navItemSideMargin: 0.5rem;
 			transform: scaleX(1);
 			background-color: $color-accent;
 		}
-	}
-}
-
-.landing__title {
-	padding: 20.5rem 2rem 10rem;
-	text-align: center;
-	color: white;
-
-	@include break-tablet {
-		padding: 19.5rem 2rem 14rem;
-	}
-
-	h1, h5 {
-		font-weight: 400;
-	}
-
-	h1 {
-		margin: 0;
-		font-size: 4.5rem;
-		font-family: $font-emphasis;
-	}
-
-	h5 {
-		&:nth-child(1) {
-			color: $md-grey-200;
-		}
-		&:nth-child(3) {
-			color: $md-grey-500;
-			#jsJobTitleText {
-				cursor: pointer;
-				animation: colorHighlight 3s ease infinite;
-
-				@keyframes colorHighlight {
-					0%, 100% {
-						color: inherit;
-					}
-					50% {
-						color: $md-grey-400;
-					}
-				}
-			}
-		}
-	}
-
-	hr {
-		width: 10rem;
-		height: 0.2rem;
-		margin: 2.5rem auto 0;
-		border: 0;
-		background-color: white;
 	}
 }

@@ -1,8 +1,8 @@
-<nav class="landing__navbar" id="jsNav">
+<nav class="navbar" id="jsNav">
 
 	<div class="width-limiter">
 
-		<ul class="landing__navbar__list">
+		<ul class="navbar__list">
 
 			<a href="#home"><li>Home</li></a>
 
