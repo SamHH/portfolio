@@ -1,17 +1,10 @@
 /**
-* Description: Mixins for use in development.
-* Check Git for authorship and edits information.
-*
-* Contents:
-*	0. Smart Center
-*	1. Inline Media Queries
-*/
-
-/* ==========================================================================
-   0. Smart Center
-   ========================================================================== */
+ * Sass mixins
+ */
 
 /**
+ * Smart Center
+ *
  * Uses transform:translate() to center items horizontally and/or vertically. There is also a reset function available.
  *
  * Example usage:
@@ -63,14 +56,10 @@
 	position: $position-type;
 }
 
-/* ==========================================================================
-   1. Inline Media Queries
-   ========================================================================== */
-
 /**
- * Allows media query properties to be applied inline alongside the standard styles (see: http://davidwalsh.name/write-media-queries-sass).
+ * Inline Media Queries
  *
- * Minimum mobile size is set in the body, typically 320px.
+ * Allows media query properties to be applied inline alongside the standard styles (see: http://davidwalsh.name/write-media-queries-sass).
  *
  * Example usage:
  *

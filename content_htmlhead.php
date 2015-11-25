@@ -58,7 +58,7 @@
 		<link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
 
 		<!-- Personal Stylesheet(s) -->
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
 
 		<title>Sam A. Horvath-Hunt // Portfolio</title>
 

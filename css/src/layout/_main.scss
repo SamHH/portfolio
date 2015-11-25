@@ -1,0 +1,19 @@
+/**
+ * Base styling of <main> element present on every page
+ */
+
+main {
+
+	h2 {
+		font-family: $font-emphasis;
+		text-transform: uppercase;
+	}
+
+	hr {
+		width: 85%;
+		height: 0.2rem;
+		margin: 1rem auto;
+		border: 0;
+		background-color: $color-secondary;
+	}
+}

@@ -1,18 +1,19 @@
+/**
+ * Skeleton / base styles of site
+ *
+ * #1: Can't be css comma'd due to browsers dropping the entire thing
+       upon finding something they don't understand (e.g. prefix)
+ */
+
 * {
 	margin: 0 auto;
 }
 
 html {
 	min-width: $min-site-width;
-	font-size: 62.5%; // Sets font sizing to base 10 - http://clagnut.com/blog/348/
 	color: $md-grey-900;
 	cursor: default;
 	box-sizing: border-box;
-	font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-
-	@include break-desktop {
-		font-size: 70%;
-	}
 }
 
 *, *:before, *:after {
@@ -27,34 +28,6 @@ a {
 
 a:active, a:focus {
 	outline: none;
-}
-
-h1 {
-	font-size: 3rem;
-}
-
-h2 {
-	font-size: 2.5rem;
-}
-
-h3 {
-	font-size: 2rem;
-}
-
-h4 {
-	font-size: 1.6rem;
-}
-
-h5 {
-	font-size: 1.2rem;
-}
-
-h6 {
-	font-size: 0.8rem;
-}
-
-p {
-	font-size: 1.6rem;
 }
 
 input {
@@ -75,7 +48,7 @@ button {
 	font-size: 1.5rem;
 	border-radius: 0.3rem;
 	transition: all 150ms ease-in-out;
-	font-family: 'Montserrat';
+	font-family: $font-emphasis;
 
 	&:hover {
 		background-color: $color-primary;
@@ -91,13 +64,12 @@ button {
 	}
 }
 
-// Can't be css comma'd due to browsers dropping the entire thing upon finding something they don't understand (e.g. prefix)
-::selection {
+::selection { // #1
 	background-color: $md-grey-800;
 	color: white;
 }
 
-::-moz-selection {
+::-moz-selection { // #1
 	background-color: $md-grey-800;
 	color: white;
 }

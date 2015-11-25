@@ -1,0 +1,17 @@
+/**
+ * Sass variables broadly defining the site
+ *
+ * Material colors reference:
+ * http://www.google.com/design/spec/style/color.html#color-color-palette
+ */
+
+$min-site-width: 320px;
+$max-site-width: 1200px;
+$site-padding: 2.5rem;
+
+$color-primary: $md-blue-700;
+$color-secondary: $md-blue-300;
+$color-accent: $md-pink-a400;
+
+$font-primary: 'Open Sans';
+$font-emphasis: 'Montserrat';

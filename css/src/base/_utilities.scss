@@ -1,16 +1,8 @@
-// Remove the ability to highlight stuff
-%no-select {
-	user-select: none;
-}
-
-// From: http://cssmojo.com/latest_new_clearfix_so_far/
-%clearfix {
-	&:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-}
+/**
+ * Utility classes
+ *
+ * #1: Negative top value is determined by JavaScript
+ */
 
 .clearfix {
 	@extend %clearfix;
@@ -36,8 +28,7 @@
 	max-width: $max-site-width;
 }
 
-// Negative top value is determined by JavaScript
-.anchor {
+.anchor { // #1
 	display: block;
 	position: relative;
 	visibility: hidden;
