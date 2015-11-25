@@ -22,30 +22,9 @@
 		li {
 			color: initial;
 		}
-	}
 
-	.fa {
-		display: none;
-		float: right;
-		padding: 1.2rem 0.7rem;
-		font-size: 2.6rem;
-		color: $md-grey-500;
-		transition: color 300ms ease-in-out;
-
-		@include break-tablet {
-			display: inline;
-		}
-
-		&.fa-github:hover {
-			color: #171515;
-		}
-
-		&.fa-stack-overflow:hover {
-			color: #fe7a15;
-		}
-
-		&.fa-linkedin:hover {
-			color: #0077b5;
+		.navbar__social svg {
+			fill: black;
 		}
 	}
 }
@@ -91,6 +70,38 @@ $navItemSideMargin: 0.5rem;
 		&.active:after {
 			transform: scaleX(1);
 			background-color: $color-accent;
+		}
+	}
+}
+
+.navbar__social {
+	display: none;
+	float: right;
+
+	@include break-tablet {
+		display: inline;
+	}
+
+	.github svg:hover {
+		fill: #171515;
+	}
+
+	.stackoverflow svg:hover {
+		fill: #fe7a15;
+	}
+
+	.linkedin svg:hover {
+		fill: #0077b5;
+	}
+
+	svg {
+		width: 3.8rem;
+		padding: 1rem 0.5rem 0.5rem;
+		fill: white;
+		transition: all .3s;
+
+		&:hover {
+			transform: scale(1.05);
 		}
 	}
 }

@@ -14,10 +14,19 @@
 
 		</ul>
 
-		<a href="https://github.com/samhh/portfolio" target="_blank"><span class="fa fa-github"></span></a>
-		<a href="https://stackoverflow.com/users/3369753/samhh" target="_blank"><span class="fa fa-stack-overflow"></span></a>
-		<a href="https://linkedin.com/in/samhh" target="_blank"><span class="fa fa-linkedin"
-		></span></a>
+		<div class="navbar__social">
+
+			<a href="https://github.com/samhh/portfolio" target="_blank" class="github" title="GitHub">
+				<?php echo file_get_contents('assets/images/github.svg'); ?>
+			</a>
+			<a href="https://stackoverflow.com/users/3369753/samhh" target="_blank" class="stackoverflow" title="StackOverflow">
+				<?php echo file_get_contents('assets/images/stackoverflow.svg'); ?>
+			</a>
+			<a href="https://linkedin.com/in/samhh" target="_blank" class="linkedin" title="LinkedIn">
+				<?php echo file_get_contents('assets/images/linkedin.svg'); ?>
+			</a>
+
+		</div>
 
 	</div>
 

@@ -1,9 +1,15 @@
-/* DEV */
+/* Dev */
 Name: Sam A. Horvath-Hunt
 Site (you're already here!): http://samhh.com
 Source: https://github.com/SamHH/portfolio
 Location: London, UK
 
-/*  THANKS */
+/* SVG icon credits from the Noun Project (thenounproject.com) */
+- Correct Answer by Arthur Shlain (StackOverflow)
+- External Link by Hello Many
+- networking by Yamini Ahluwalia (LinkedIn)
+- pull request by Richard Slater (GitHub)
+
+/*  Misc thanks */
 - Whoever made the background in use on the landing page **will find this at a later date
 - Everyone who contributed towards all the tools and standards in use

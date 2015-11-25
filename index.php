@@ -85,7 +85,11 @@
 
 						<div class="alternating-sides-block__chunk">
 
-							<h3>Perspective Publishing events <a href="http://bettersociety.net/awards/" target="_blank"><span class="fa fa-external-link"></span></a> <a href="http://www.cirmagazine.com/businesscontinuityawards/" target="_blank"><span class="fa fa-external-link"></span></a> <a href="http://www.engagementandloyalty.com/" target="_blank"><span class="fa fa-external-link"></span></a></h3>
+							<h3>Perspective Publishing events
+								<a href="http://bettersociety.net/awards/" target="_blank"><?php echo file_get_contents('assets/images/external-link.svg'); ?></a>
+								<a href="http://www.cirmagazine.com/businesscontinuityawards/" target="_blank"><?php echo file_get_contents('assets/images/external-link.svg'); ?></a>
+								<a href="http://www.engagementandloyalty.com/" target="_blank"><?php echo file_get_contents('assets/images/external-link.svg'); ?></a>
+							</h3>
 
 							<p>
 								Design, frontend & backend, ~ Summer 2015<br><br>
@@ -97,7 +101,9 @@
 
 						<div class="alternating-sides-block__chunk">
 
-							<h3>Perspective Publishing landing <a href="http://www.perspectivepublishing.com/pp/" target="_blank"><span class="fa fa-external-link"></span></a></h3>
+							<h3>Perspective Publishing landing
+								<a href="http://www.perspectivepublishing.com/pp/" target="_blank"><?php echo file_get_contents('assets/images/external-link.svg'); ?></a>
+							</h3>
 
 							<p>
 								Design, frontend & backend, ~ Spring 2015<br><br>
@@ -111,7 +117,11 @@
 
 						<div class="alternating-sides-block__chunk">
 
-							<h3>Perspective Publishing magazines <a href="http://www.pensionsage.com/pa/" target="_blank"><span class="fa fa-external-link"></span></a> <a href="http://www.europeanpensions.net/ep/" target="_blank"><span class="fa fa-external-link"></span></a> <a href="http://www.fstech.co.uk/fst/" target="_blank"><span class="fa fa-external-link"></span></a></h3>
+							<h3>Perspective Publishing magazines
+								<a href="http://www.pensionsage.com/pa/" target="_blank"><?php echo file_get_contents('assets/images/external-link.svg'); ?></a>
+								<a href="http://www.europeanpensions.net/ep/" target="_blank"><?php echo file_get_contents('assets/images/external-link.svg'); ?></a>
+								<a href="http://www.fstech.co.uk/fst/" target="_blank"><?php echo file_get_contents('assets/images/external-link.svg'); ?></a>
+							</h3>
 
 							<p>
 								Frontend, ~ Summer 2014<br><br>

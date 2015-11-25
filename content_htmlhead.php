@@ -54,7 +54,6 @@
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
 
 		<!-- CSS Dependencies -->
-		<link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
 
 		<!-- Personal Stylesheet(s) -->

@@ -23,7 +23,6 @@
     "material-colors": "^1.0.0"
   },
   "dependencies": {
-    "font-awesome": "^4.4.0",
     "lodash": "^3.10.1",
     "normalize.css": "^3.0.3"
   }

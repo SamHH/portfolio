@@ -196,14 +196,14 @@
 		margin: 1.5rem 0 0.5rem;
 		color: $color-accent;
 
-		.fa {
-			margin: 0 0 0 0.5rem;
-			font-size: 0.75em;
-			color: $md-grey-400;
-			transition: color .2s;
+		svg {
+			width: 2.5rem;
+			vertical-align: bottom;
+			fill: $md-grey-400;
+			transition: fill .2s;
 
 			&:hover {
-				color: $md-grey-600;
+				fill: $md-grey-600;
 			}
 		}
 	}
