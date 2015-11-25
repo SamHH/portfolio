@@ -4,11 +4,11 @@
 
 	<body>
 
-		<a class="anchor" name="home"></a>
 		<?php
 			require('content_nav.php');
 		?>
 
+		<a class="anchor" name="home"></a>
 		<header class="landing-block">
 
 			<section class="landing-block__title" id="jsFold">
