@@ -1,6 +1,6 @@
 # SamHH | Portfolio
 
-My portfolio site, far from finished! ([samhh.com](http://samhh.com))
+My portfolio, live at: ([samhh.com](https://samhh.com))
 
 ---
 
