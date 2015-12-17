@@ -1,0 +1,47 @@
+block title
+  title= test
+
+  - var metaName = 'Sam A. Horvath-Hunt'
+  - var metaSiteTitle = 'Portfolio'
+  - var metaSiteFullName = metaName + ' // ' + metaSiteTitle
+  - var metaThisUrl = 'https://samhh.com'
+  - var metaDesc = 'My name is Sam A. Horvath-Hunt. I am a web developer based in London and this website acts as both my portfolio and personal site.'
+  - var metaKeywords = 'samhh, sam a. horvath-hunt, sam horvath hunt, sam hunt, sam horvath, sam horvath-hunt, web dev, web development, website development, website developer, web developer, web designer, web design, website design, website designer, clutchhunter, impero, perspective publishing'
+
+  //- Standard SEO
+  meta(name='description', content=metaDesc)
+  meta(name='keywords', content=metaKeywords)
+
+  //- Twitter
+  meta(name='twitter:card', content=metaDesc)
+  meta(name='twitter:creator', content=metaName)
+  //- meta(name='twitter:image', content='tbc')
+
+  //- Schema.org / Google+
+  meta(itemprop='name', content=metaSiteFullName)
+  meta(itemprop='description', content=metaDesc)
+  //- meta(itemprop='image', content='tbc')
+
+  //- Open Graph
+  meta(property='og:title', content=metaSiteTitle)
+  meta(property='og:site_name', content=metaName)
+  meta(property='og:type', content='website')
+  meta(property='og:url', content=metaThisUrl)
+  //- meta(property='og:image', content='tbc')
+  meta(property='og:description', content=metaDesc)
+  meta(property='og:locale', content='en_UK')
+
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA_Compatible', content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='icon', href='/favicon.png')
+
+  //- Android Theming Colour
+  meta(name='theme-color', content='#1976d2')
+
+  link(rel='author', type='text/plain', href='/static/humans.txt')
+
+  link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Open+Sans:400,600')
+  link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Montserrat:400,700')
+
+  link(rel='stylesheet', href='/static/dist/main.css')

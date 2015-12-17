@@ -1,0 +1,22 @@
+// CSS dependencies
+// These will be injected into the generated CSS file using postcss-import
+@import '../../../node_modules/normalize.css/normalize.css';
+
+// Sass/SCSS dependencies
+@import '../../../node_modules/material-colors/dist/colors.scss';
+
+// Everything else
+@import 'base/vars';
+@import 'base/mixins';
+@import 'base/placeholders';
+@import 'base/utilities';
+@import 'base/typography';
+
+@import 'layout/skeleton';
+@import 'layout/nav';
+@import 'layout/main';
+@import 'layout/footer';
+
+@import 'modules/blocks';
+@import 'modules/bubbles';
+@import 'modules/loaders';

@@ -1,115 +1,98 @@
-/*
-* CORE
-*/
-var gulp = require('gulp');
+// Core
+require('dotenv').load();
+const gulp = require('gulp');
 
-/*
-* GENERAL
-*/
-var notify = require('gulp-notify');
-var plumber = require('gulp-plumber');
+// Errors
+const notify = require('gulp-notify');
+const plumber = require('gulp-plumber');
 
-/*
-* BROWSERSYNC
-*/
-var browserSync = require('browser-sync');
-var filter = require('gulp-filter');
+// BrowserSync
+const browserSync = require('browser-sync');
+const filter = require('gulp-filter');
 
-/*
-* (S)CSS
-*/
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var prefix = require('gulp-autoprefixer');
-var pixrem = require('gulp-pixrem');
-var postcss = require('gulp-postcss');
-var lost = require('lost');
+// CSS
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const postcss = require('gulp-postcss');
+const importcss = require('postcss-import');
+const lost = require('lost');
+const autoprefixer = require('autoprefixer');
+const pixrem = require('pixrem');
+const cssnano = require('cssnano');
 
-/*
-* JS
-*/
-var babel = require('gulp-babel');
-var jshint = require('gulp-jshint');
-var concat = require('gulp-concat');
+// JS
+const jshint = require('gulp-jshint');
+const browserify = require('browserify');
+const babelify = require('babelify');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
 
-/*
-* VARS
-*/
+// Vars
+var onError = notify.onError({
+  title: 'Gulp Error',
+  message: 'Error: <%= error.message %>',
+  sound: 'Frog'
+});
 
-// gulp-plumber
 var plumberOptions = {
-	errorHandler: onError
-}
+  errorHandler: onError
+};
 
-// gulp-notify
-var onError = function(err) {
-	notify.onError({
-		title: 'Gulp',
-		subtitle: 'Failure!',
-		message:  'Error: <%= error.message %>',
-		sound:    'Beep'
-	})(err);
-
-	this.emit('end');
-}
-
-
-
-/*
-* TASKS
-*/
+// Tasks
 gulp.task('default', ['browser-sync', 'watch']);
 
-gulp.task('browser-sync', ['task-css'], function() {
-	browserSync({
-		proxy: 'localhost:4567',
-		files: ['css/main.css', 'js/main.js', '*.php', 'views/*']
-	});
+gulp.task('browser-sync', ['task_css'], function () {
+  browserSync({
+    proxy: 'localhost:5000',
+    files: [
+      `${process.env.STATIC_DIR}/dist/main.css`,
+      `${process.env.STATIC_DIR}/dist/main.js`,
+      '**/views/**/*.jade'
+    ],
+    open: false
+  });
 });
 
 gulp.task('watch', function () {
-	gulp.watch('css/src/**/*.scss', ['task-css']);
-	gulp.watch('js/src/*.js', ['task-js'])
+  gulp.watch(`${process.env.STATIC_DIR}/css/**/*.scss`, ['task_css']);
+  gulp.watch(`${process.env.STATIC_DIR}/js/**/*.js`, ['task_js_lint', 'task_js_transform']);
 });
 
-gulp.task('task-css', function() {
-	// not being returned intentionally, see: https://github.com/dlmanning/gulp-sass/wiki/Common-Issues-and-Their-Fixes#gulp-watch-stops-working-on-an-error
-	// couldn't get it to work with plumber/notify, worth trying again in the future
-	gulp.src('css/src/main.scss')
-		.pipe(sourcemaps.init())
-		.pipe(sass({
-			outputStyle: 'compressed'
-		}).on('error', sass.logError))
-		.pipe(postcss([
-			lost()
-		]))
-		.pipe(prefix(['last 3 versions', '> 5%', 'ie >= 9']))
-		.pipe(pixrem())
-		.pipe(sourcemaps.write('./', {
-			includeContent: false
-		}))
-		.pipe(gulp.dest('css'))
-		.pipe(filter('css/*.css'))
-		.pipe(browserSync.reload({
-			stream:true
-		}))
-});
-
-gulp.task('task-js', function() {
-	return gulp.src('js/src/*.js')
-		// notify not being triggered
-		.pipe(plumber(plumberOptions))
-		.pipe(jshint({
-			esnext: true
-		}))
-		.pipe(jshint.reporter('default'))
-		.pipe(sourcemaps.init())
-		.pipe(concat('main.js'))
-		.pipe(babel({
-      presets: ['es2015']
+gulp.task('task_css', function () {
+  return gulp.src(`${process.env.STATIC_DIR}/css/**/*.scss`)
+    .pipe(plumber(plumberOptions))
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }).on('error', sass.logError))
+    .pipe(postcss([
+      lost,
+      autoprefixer({ browsers: ['last 3 versions', '> 5%', 'ie >= 10'] }),
+      pixrem,
+      importcss,
+      cssnano
+    ]))
+    .pipe(sourcemaps.write('./', {
+      includeContent: false
     }))
-		.pipe(sourcemaps.write('./', {
-			includeContent: false
-		}))
-		.pipe(gulp.dest('js'))
+    .pipe(gulp.dest(`${process.env.STATIC_DIR}/dist/`));
+});
+
+gulp.task('task_js_lint', function () {
+  return gulp.src(`${process.env.STATIC_DIR}/js/**/*.js`)
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'))
+    .pipe(jshint.reporter('fail').on('error', onError));
+});
+
+gulp.task('task_js_transform', function () {
+  return browserify(`${process.env.STATIC_DIR}/js/main.js`)
+    .transform(babelify, { presets: ['es2015'] })
+    .bundle()
+    .pipe(plumber(plumberOptions))
+    .pipe(source('main.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({ loadMaps: true }))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(`${process.env.STATIC_DIR}/dist/`));
 });

@@ -1,0 +1,31 @@
+/**
+ * CSS loaders
+ *
+ * #1: Set to 'ease' for Android-esque gradual spin or 'linear' for constant spin
+ */
+
+$loaderSize: 1em;
+$loaderTime: 1.5s;
+$loaderColor: white;
+$loaderTimingFunction: ease; // #1
+
+.loader {
+  border: ($loaderSize / 6) solid transparentize($loaderColor, 0.75);
+  border-left: ($loaderSize / 6) solid $loaderColor;
+  animation: youSpinMeRightRound $loaderTime infinite $loaderTimingFunction;
+}
+.loader,
+.loader:after {
+  width: $loaderSize;
+  height: $loaderSize;
+  border-radius: 50%;
+}
+
+@keyframes youSpinMeRightRound {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

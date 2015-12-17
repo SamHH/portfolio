@@ -1,6 +1,6 @@
 /* Dev */
 Name: Sam A. Horvath-Hunt
-Site (you're already here!): http://samhh.com
+Site (you're already here!): https://samhh.com
 Source: https://github.com/SamHH/portfolio
 Location: London, UK
 
@@ -12,4 +12,5 @@ Location: London, UK
 
 /*  Misc thanks */
 - Whoever made the background in use on the landing page **will find this at a later date
+- My employers Impero for their Skeleton repo that was the basis for my switch to Node, Browserify and more
 - Everyone who contributed towards all the tools and standards in use

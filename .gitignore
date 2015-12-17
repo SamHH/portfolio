@@ -1,13 +1,10 @@
-# Some directories such as those from Bower and Composer need to be pulled by the server automatically. Alas, our servers and deployment setup aren't that complex (yet), but that's what we're working with for the sake of keeping the version control clean
-
-# NPM
+# npm
 node_modules/
 
-# Composer
-vendor/
-composer.lock
+# Generated files
+**/dist/
 
 # Misc
 .DS_Store
 .env
-assets/
+**/img/

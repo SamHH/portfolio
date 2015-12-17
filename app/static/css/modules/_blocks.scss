@@ -10,7 +10,7 @@
  */
 
 .landing-block {
-	background-image: url('../assets/images/landing.jpg');
+	background-image: url('/static/img/landing.jpg');
 	background-size: cover;
 	text-transform: uppercase;
 }
@@ -145,27 +145,11 @@
 
 .alternating-sides-block {
 	padding: 2rem;
-
-	.button-wrapper {
-
-		@include break-desktop {
-			display: flex;
-
-			button {
-				width: initial;
-			}
-		}
-
-		button {
-			width: 100%;
-		}
-	}
 }
 
 .alternating-sides-block__chunk {
-	width: 100%;
 	padding: 1.5rem 0;
-	margin: 2rem auto 5rem;
+	margin: 1rem auto 2.5rem;
 	border-radius: 0.5rem;
 
 	&:nth-child(2n+2) {
@@ -174,6 +158,7 @@
 
 	@include break-desktop {
 		width: 50%;
+		margin: 2rem auto 5rem;
 		float: left;
 
 		&:nth-child(2n+1) {
@@ -207,4 +192,9 @@
 			}
 		}
 	}
+}
+
+.alternating-sides-block__chunk__header__link-wrapper {
+	display: inline-block;
+	margin: 0 0 0 .5rem;
 }

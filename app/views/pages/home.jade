@@ -1,0 +1,47 @@
+extend ../layout
+
+append body
+  a.anchor(name='home')
+  header.landing-block
+    section.landing-block__title#jsFold
+      .width-limiter
+        h5 The portfolio of
+        h1 Sam A. Horvath-Hunt
+        h5 A <span id="jsJobTitleText">web developer</span> from London, UK
+  main
+    a.anchor(name='expertise')
+    section.general-block
+      .width-limiter
+        for group in expertise
+          h2= group[0].heading
+          p!= group[0].content
+    a.anchor(name='projects')
+    section.alternating-sides-block
+      .width-limiter
+        h2 Projects to date
+        .clearfix
+          for project in projects
+            .alternating-sides-block__chunk
+              h3 #{project[0].heading}
+                .alternating-sides-block__chunk__header__link-wrapper
+                  for link in project[0].links
+                    a(href='#{link}', target='_blank')
+                      include ../../static/img/external-link.svg
+              p!= project[0].content
+        h3.alternate-colors
+          for word in alternateColors
+            span #{word}&nbsp;
+    a.anchor(name='contact')
+    section.general-block#jsFormContainer
+      form#jsForm(action='/send-email', method='POST')
+        h2 Get in touch
+        label(for='name') Name
+        input(type='text', name='name', required)
+        label(for='email') Email address (optional)
+        input(type='email', name='email')
+        label(for='subject') Subject
+        input(type='text', name='subject', required)
+        label(for='message') Message
+        textarea(name='message', required)
+        button#jsFormButton(type='submit') Send
+      .form-notice#jsFormNotice Thanks for getting in touch. I'll get back to you as soon as I can!
