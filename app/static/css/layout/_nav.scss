@@ -17,7 +17,7 @@
 
 	&.active {
 		background-color: white;
-		box-shadow: 0 1px 5px $md-grey-300;
+		border-bottom: 0.1rem solid $md-grey-200;
 
 		li {
 			color: initial;
