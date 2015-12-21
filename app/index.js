@@ -13,8 +13,8 @@ app.use('/static', express.static(`${__dirname}/static`));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Routes
-require('./routes')(app);
+// Controller (and models)
+require('./controller')(app);
 
 // Run
 app.listen(app.get('port'), function (err) {

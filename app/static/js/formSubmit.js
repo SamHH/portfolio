@@ -12,6 +12,7 @@ module.exports = {
     this.form = document.getElementById('jsForm');
     this.formButton = document.getElementById('jsFormButton');
     this.formNotice = document.getElementById('jsFormNotice');
+    this.captchaResponse = document.getElementById('g-recaptcha-response');
   },
   bindEvents() {
     this.form.addEventListener('submit', this.submitAjax.bind(this));
@@ -25,35 +26,35 @@ module.exports = {
     // Prevent standard form submission
     event.preventDefault();
 
-    if (this.submitAllowed === true) {
-      // Change icon to fancy spinner while maintaining minimum button width
-      let buttonWidth = parseInt(window.getComputedStyle(this.formButton).getPropertyValue('width'));
-      this.formButton.style.width = buttonWidth + 'px';
-      this.formButton.innerHTML = '<div class="loader"></div>';
+    if (!this.submitAllowed) return;
 
-      // Submit over AJAX
-      let httpRequest = new XMLHttpRequest();
-      httpRequest.open(this.form.method, this.form.action);
-      httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-      httpRequest.send(
-        'name=' + encodeURIComponent(this.form.elements.namedItem('name').value) +
-        '&email=' +
-        encodeURIComponent(this.form.elements.namedItem('email').value) +
-        '&subject=' + encodeURIComponent(this.form.elements.namedItem('subject').value) +
-        '&message=' + encodeURIComponent(this.form.elements.namedItem('message').value) +
-        '&ajax=yes'
-      );
+    // Change icon to fancy spinner while maintaining minimum button width
+    let buttonWidth = parseInt(window.getComputedStyle(this.formButton).getPropertyValue('width'));
+    this.formButton.style.width = buttonWidth + 'px';
+    this.formButton.innerHTML = '<div class="loader"></div>';
 
-      httpRequest.onreadystatechange = function () {
-        if (httpRequest.readyState === 4 && httpRequest.status === 200) {
-          if (httpRequest.responseText === 'success') {
-            this.removeForm();
-          } else {
-            console.error('Email send failed: ' + httpRequest.responseText);
-          }
+    // Submit over AJAX
+    let httpRequest = new XMLHttpRequest();
+    httpRequest.open(this.form.method, this.form.action);
+    httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    httpRequest.send(
+      'name=' + encodeURIComponent(this.form.elements.namedItem('name').value) +
+      '&email=' +
+      encodeURIComponent(this.form.elements.namedItem('email').value) +
+      '&subject=' + encodeURIComponent(this.form.elements.namedItem('subject').value) +
+      '&message=' + encodeURIComponent(this.form.elements.namedItem('message').value) +
+      '&ajax=yes'
+    );
+
+    httpRequest.onreadystatechange = function () {
+      if (httpRequest.readyState === 4 && httpRequest.status === 200) {
+        if (httpRequest.responseText === 'success') {
+          this.removeForm();
+        } else {
+          console.error('Email send failed: ' + httpRequest.responseText);
         }
-      }.bind(this);
-    }
+      }
+    }.bind(this);
   },
   removeForm() {
     // Empty out form values
