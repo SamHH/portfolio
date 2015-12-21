@@ -1,4 +1,6 @@
 module.exports = {
+  throttle: require('lodash/function/throttle'),
+
   activated: false,
   numBubbles: 40,
   minimumBubbleSizeInPx: 3,
@@ -15,14 +17,16 @@ module.exports = {
     this.bubblesContainer = document.getElementById('jsBubbles');
   },
   bindEvents() {
-    document.addEventListener('scroll', this.checkBubblesVisibility.bind(this));
+    document.addEventListener('scroll', this.throttle(function () {
+      this.checkBubblesVisibility();
+    }.bind(this), 500));
     this.bubblesContainer.addEventListener('animationend', this.removeBubbles.bind(this));
   },
   // This can probably be improved:
   // Presently just triggers once at bottom of page
   // Also doesn't yet remove above scroll event listener and instead uses the this.activated boolean
   checkBubblesVisibility() {
-    if (this.activated === false && window.pageYOffset === document.body.clientHeight - window.innerHeight) {
+    if (!this.activated && window.pageYOffset === document.body.clientHeight - window.innerHeight) {
       this.createBubbles();
       this.activated = true;
     }
