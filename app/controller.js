@@ -1,7 +1,7 @@
 module.exports = function (app) {
   const requireDir = require('require-dir');
-  var models = requireDir('./models');
+  var controllers = requireDir('./controllers');
 
-  app.get('/', models.home);
-  app.post('/send-email', models.formSubmit);
+  app.get('/', controllers.home);
+  app.post('/send-email', controllers.formSubmit);
 };
