@@ -1,8 +1,11 @@
-var nav = require('./nav');
-var jobTitle = require('./jobTitle');
-var bubbles = require('./bubbles');
-var formSubmit = require('./formSubmit');
+var nav = require('./modules/nav');
 nav.init();
+
+var jobTitle = require('./modules/jobTitle');
 jobTitle.init();
+
+var bubbles = require('./modules/bubbles');
 bubbles.init();
+
+var formSubmit = require('./modules/formSubmit');
 formSubmit.init();
