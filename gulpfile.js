@@ -39,11 +39,12 @@ var plumberOptions = {
 };
 
 // Tasks
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('develop', ['browser-sync', 'watch']);
 
 gulp.task('browser-sync', ['task_css'], function () {
   browserSync({
-    proxy: 'localhost:5000',
+    proxy: `localhost:${process.env.NODE_PORT}`,
+    port: parseInt(process.env.NODE_PORT) + 1,
     files: [
       `${process.env.STATIC_DIR}/dist/main.css`,
       `${process.env.STATIC_DIR}/dist/main.js`,

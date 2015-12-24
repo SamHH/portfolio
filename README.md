@@ -10,7 +10,7 @@ No code is exempted from this repository excluding dependencies. Images and othe
 
 ## Which technologies are in use here?
 
-This project runs Node on the backend with various npm dependencies such as Express
+This project runs Node on the backend with various npm dependencies such as Express and nodemon
 
 ### Meanwhile, on the frontend...
 
@@ -22,7 +22,10 @@ This project runs Node on the backend with various npm dependencies such as Expr
 
 ## Which browsers are supported?
 
-This project supports IE10+ in an attempt to find vanilla JavaScript usable on the frontend without the need for libraries such as jQuery (for example, IE9 doesn't even support ``Element.classList``)
+- All modern/evergreen browsers
+- IE10+
+
+This project supports only IE10+ in an attempt to find vanilla JavaScript usable on the frontend without the need for libraries such as jQuery (for example, IE9 doesn't even support ``Element.classList``)
 
 Soon after IE10 is killed off officially by Microsoft (currently scheduled for [January 12, 2016](https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support)), the minimum browser required will become IE11. The hope is that eventually we can reach a state whereby only evergreen browsers are supported (Chrome, Firefox, Edge, et cetera)
 
@@ -32,8 +35,8 @@ Soon after IE10 is killed off officially by Microsoft (currently scheduled for [
 2. Clone the repo
 3. Rename ``.env.example`` to ``.env`` and edit the variables as required
 4. Run ``npm install`` to install all dependencies
-5. Run ``node --use_strict app/index`` to start the server on port 5000 (accessible at [localhost:5000](http://localhost:5000)). Optionally, consider running nodemon for live reloading
-6. Finally run ``gulp`` to start the various tasks. This will start a [BrowserSync](http://www.browsersync.io/) instance on port 3000, mirroring the content on the node server above
+5. Run ``npm start`` to start the server on (by default) port 5000 (accessible at [localhost:5000](http://localhost:5000))
+6. Finally run ``gulp develop`` to start the various tasks. This will start a [BrowserSync](http://www.browsersync.io/) instance on (by default) port 5001, mirroring the content on the node server above
 
 ## Styleguide
 

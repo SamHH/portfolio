@@ -1,8 +1,11 @@
 {
-  "name": "samhh",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "SamHH's NPM dev dependencies.",
-  "main": "gulpfile.js",
+  "description": "SamHH's portfolio.",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "nodemon --use_strict app/index"
+  },
   "author": "SamHH",
   "devDependencies": {
     "autoprefixer": "^6.1.2",
@@ -23,6 +26,7 @@
     "jshint": "^2.8.0",
     "lost": "^6.6.2",
     "material-colors": "^1.0.0",
+    "nodemon": "^1.8.1",
     "pixrem": "^3.0.0",
     "postcss-import": "^7.1.3",
     "vinyl-buffer": "^1.0.0",
