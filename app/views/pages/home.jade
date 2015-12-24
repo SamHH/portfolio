@@ -26,7 +26,7 @@ append body
                 .alternating-sides-block__chunk__header__link-wrapper
                   for link in project[0].links
                     a(href='#{link}', target='_blank')
-                      include ../../static/img/external-link.svg
+                      include ../../public/img/external-link.svg
               p!= project[0].content
         h3.alternate-colors
           for word in alternateColors

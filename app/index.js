@@ -7,7 +7,7 @@ const app = express();
 app.set('port', process.env.NODE_PORT || 5000);
 app.set('views', `${__dirname}/views`);
 app.set('view engine', 'jade');
-app.use('/static', express.static(`${__dirname}/static`));
+app.use('/public', express.static(`${__dirname}/public`));
 
 // Body parsing
 app.use(bodyParser.urlencoded({ extended: false }));

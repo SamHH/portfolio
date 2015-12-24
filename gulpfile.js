@@ -46,8 +46,8 @@ gulp.task('browser-sync', ['task_css'], function () {
     proxy: `localhost:${process.env.NODE_PORT}`,
     port: parseInt(process.env.NODE_PORT) + 1,
     files: [
-      `${process.env.STATIC_DIR}/dist/main.css`,
-      `${process.env.STATIC_DIR}/dist/main.js`,
+      `${process.env.PUBLIC_DIR}/dist/main.css`,
+      `${process.env.PUBLIC_DIR}/dist/main.js`,
       '**/views/**/*.jade'
     ],
     open: false
@@ -55,12 +55,12 @@ gulp.task('browser-sync', ['task_css'], function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(`${process.env.STATIC_DIR}/css/**/*.scss`, ['task_css']);
-  gulp.watch(`${process.env.STATIC_DIR}/js/**/*.js`, ['task_js_lint', 'task_js_transform']);
+  gulp.watch(`${process.env.SRC_DIR}/css/**/*.scss`, ['task_css']);
+  gulp.watch(`${process.env.SRC_DIR}/js/**/*.js`, ['task_js_lint', 'task_js_transform']);
 });
 
 gulp.task('task_css', function () {
-  return gulp.src(`${process.env.STATIC_DIR}/css/**/*.scss`)
+  return gulp.src(`${process.env.SRC_DIR}/css/**/*.scss`)
     .pipe(plumber(plumberOptions))
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -76,18 +76,18 @@ gulp.task('task_css', function () {
     .pipe(sourcemaps.write('./', {
       includeContent: false
     }))
-    .pipe(gulp.dest(`${process.env.STATIC_DIR}/dist/`));
+    .pipe(gulp.dest(`${process.env.PUBLIC_DIR}/dist/`));
 });
 
 gulp.task('task_js_lint', function () {
-  return gulp.src(`${process.env.STATIC_DIR}/js/**/*.js`)
+  return gulp.src(`${process.env.SRC_DIR}/js/**/*.js`)
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
     .pipe(jshint.reporter('fail').on('error', onError));
 });
 
 gulp.task('task_js_transform', function () {
-  return browserify(`${process.env.STATIC_DIR}/js/main.js`)
+  return browserify(`${process.env.SRC_DIR}/js/main.js`)
     .transform(babelify, { presets: ['es2015'] })
     .bundle()
     .pipe(plumber(plumberOptions))
@@ -95,5 +95,5 @@ gulp.task('task_js_transform', function () {
     .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(`${process.env.STATIC_DIR}/dist/`));
+    .pipe(gulp.dest(`${process.env.PUBLIC_DIR}/dist/`));
 });
