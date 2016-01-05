@@ -27,6 +27,9 @@ const babelify = require('babelify');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 
+// JSON
+const jsonlint = require('gulp-jsonlint');
+
 // Vars
 var onError = notify.onError({
   title: 'Gulp Error',
@@ -57,6 +60,7 @@ gulp.task('browser-sync', ['task_css'], function () {
 gulp.task('watch', function () {
   gulp.watch(`${process.env.SRC_DIR}/css/**/*.scss`, ['task_css']);
   gulp.watch(`${process.env.SRC_DIR}/js/**/*.js`, ['task_js_lint', 'task_js_transform']);
+  gulp.watch('./app/data/**/*.json', ['task_json']);
 });
 
 gulp.task('task_css', function () {
@@ -96,4 +100,10 @@ gulp.task('task_js_transform', function () {
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(`${process.env.PUBLIC_DIR}/dist/`));
+});
+
+gulp.task('task_json', function () {
+  return gulp.src('./app/data/**/*.json')
+    .pipe(jsonlint())
+    .pipe(jsonlint.reporter());
 });
