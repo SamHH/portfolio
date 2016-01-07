@@ -62,7 +62,7 @@ module.exports = {
     let furthest = null;
 
     // If at end of document, use last anchor (as good chance last anchor not big enough to get triggered otherwise)
-    if (window.pageYOffset == document.body.clientHeight - window.innerHeight) {
+    if (window.pageYOffset === document.body.clientHeight - window.innerHeight) {
       furthest = this.anchors.length - 1;
     } else {
       for (let i = 0; i < this.anchors.length; i++) {
