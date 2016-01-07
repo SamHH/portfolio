@@ -1,11 +1,12 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-
-var nav = require('./modules/nav');
+import nav from './modules/nav';
 nav.init();
-var jobTitle = require('./modules/jobTitle');
+import jobTitle from './modules/jobTitle';
 jobTitle.init();
-var bubbles = require('./modules/bubbles');
+import bubbles from './modules/bubbles';
 bubbles.init();
-var formSubmit = require('./modules/formSubmit');
+import formSubmit from './modules/formSubmit';
 formSubmit.init();
+
+// Learning React
+import react from './modules/react';
+react();

@@ -1,6 +1,6 @@
-module.exports = {
-  throttle: require('lodash/function/throttle'),
+import throttle from 'lodash/function/throttle';
 
+export default {
   activated: false,
   numBubbles: 40,
   minimumBubbleSizeInPx: 3,
@@ -20,7 +20,7 @@ module.exports = {
     // Only run on pages with this element
     if (!this.bubblesContainer) return;
 
-    document.addEventListener('scroll', this.throttle(function () {
+    document.addEventListener('scroll', throttle(function () {
       this.checkBubblesVisibility();
     }.bind(this), 500));
     this.bubblesContainer.addEventListener('animationend', this.removeBubbles.bind(this));

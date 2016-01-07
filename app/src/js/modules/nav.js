@@ -1,6 +1,6 @@
-module.exports = {
-  throttle: require('lodash/function/throttle'),
+import throttle from 'lodash/function/throttle';
 
+export default {
   activeTabClassName: 'active',
   init() {
     this.cacheDom();
@@ -34,14 +34,10 @@ module.exports = {
     this.anchorOffsetDueToNav = '-' + parseInt(navStyles.getPropertyValue('height')) + 'px';
   },
   bindEvents() {
-    document.addEventListener('scroll', this.throttle(function () { // Throttle prevents these functions from running more often than the time specified in ms
+    document.addEventListener('scroll', throttle(function () { // Throttle prevents these functions from running more often than the time specified in ms
       this.updateHeaderActiveState();
       this.checkScrollPosRelToAnchors();
     }.bind(this), 500));
-  // document.addEventListener('scroll', _.throttle(function () { // Throttle prevents these functions from running more often than the time specified in ms
-  //   this.updateHeaderActiveState();
-  //   this.checkScrollPosRelToAnchors();
-  // }.bind(this), 500));
   },
   setNavFixed() {
     this.nav.style.position = 'fixed';

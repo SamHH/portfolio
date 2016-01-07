@@ -6,4 +6,7 @@ module.exports = function (app) {
 
   app.get('/', controllers.home);
   app.post('/send-email', controllers.formSubmit);
+
+  // Temp - learning React
+  app.get('/react', controllers.react);
 };

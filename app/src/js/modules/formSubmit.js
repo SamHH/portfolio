@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   timeBeforeSubmitAllowedInSeconds: 5,
   formFadeTransitionTimeInSeconds: 0.5,
   submitAllowed: false,

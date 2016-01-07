@@ -1,11 +1,12 @@
 {
+  "parser": "babel-eslint",
   "env": {
     "browser": true,
-    "es6": true,
-    "commonjs": true
+    "es6": true
   },
   "ecmaFeatures": {
-    "jsx": true
+    "jsx": true,
+    "modules": true
   },
   "rules": {
     "quotes": [
