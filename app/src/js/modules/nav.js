@@ -12,6 +12,9 @@ module.exports = {
     this.anchors = document.getElementsByClassName('anchor');
   },
   checkCompat() {
+    // Only run on pages with these elements
+    if (!this.nav || !this.fold) return;
+
     // If classList is supported, set header position to fixed and run other scripts
     if (this.nav.classList) {
       this.setNavFixed();

@@ -7,6 +7,9 @@ module.exports = {
     this.target = document.getElementById('jsJobTitleText');
   },
   bindEvents() {
+    // Only run on pages with this element
+    if (!this.target) return;
+
     this.target.onclick = this.changeText;
   },
   changeText() {

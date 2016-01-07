@@ -15,6 +15,9 @@ module.exports = {
     this.captchaResponse = document.getElementById('g-recaptcha-response');
   },
   bindEvents() {
+    // Only run on pages with form element
+    if (!this.form) return;
+
     this.form.addEventListener('submit', this.submitAjax.bind(this));
   },
   disallowSubmitIfTooQuick() {

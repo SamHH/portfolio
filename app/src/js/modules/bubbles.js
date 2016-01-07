@@ -17,6 +17,9 @@ module.exports = {
     this.bubblesContainer = document.getElementById('jsBubbles');
   },
   bindEvents() {
+    // Only run on pages with this element
+    if (!this.bubblesContainer) return;
+
     document.addEventListener('scroll', this.throttle(function () {
       this.checkBubblesVisibility();
     }.bind(this), 500));
