@@ -92,7 +92,7 @@ gulp.task('task_js_lint', function () {
 
 gulp.task('task_js_transform', function () {
   return browserify(`${process.env.SRC_DIR}/js/main.js`)
-    .transform(babelify, { presets: ['es2015'] })
+    .transform(babelify, { presets: ['es2015', 'react'] })
     .bundle()
     .pipe(plumber(plumberOptions))
     .pipe(source('main.js'))
