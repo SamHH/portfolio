@@ -21,7 +21,7 @@ const pixrem = require('pixrem');
 const cssnano = require('cssnano');
 
 // JS
-const jshint = require('gulp-jshint');
+const eslint = require('gulp-eslint');
 const browserify = require('browserify');
 const babelify = require('babelify');
 const source = require('vinyl-source-stream');
@@ -85,9 +85,8 @@ gulp.task('task_css', function () {
 
 gulp.task('task_js_lint', function () {
   return gulp.src(`${process.env.SRC_DIR}/js/**/*.js`)
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'))
-    .pipe(jshint.reporter('fail').on('error', onError));
+    .pipe(eslint())
+    .pipe(eslint.format());
 });
 
 gulp.task('task_js_transform', function () {
