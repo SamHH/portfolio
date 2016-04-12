@@ -70,7 +70,7 @@ $navItemSideMargin: 0.5rem;
 
 		&.active:after {
 			transform: scaleX(1);
-			background-color: $color-accent;
+			background-color: $color-primary;
 		}
 	}
 }
@@ -84,7 +84,7 @@ $navItemSideMargin: 0.5rem;
 	}
 
 	.github svg:hover {
-		fill: #171515;
+		fill: #aaa;
 	}
 
 	.stackoverflow svg:hover {

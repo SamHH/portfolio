@@ -8,22 +8,6 @@
 	@extend %clearfix;
 }
 
-.alternate-colors {
-	text-align: center;
-
-	span {
-		&:nth-child(3n+1) {
-			color: $color-secondary;
-		}
-		&:nth-child(3n+2) {
-			color: $color-primary;
-		}
-		&:nth-child(3n+3) {
-			color: $color-accent;
-		}
-	}
-}
-
 .width-limiter {
 	max-width: $max-site-width;
 }

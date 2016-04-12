@@ -10,7 +10,7 @@ No code is exempted from this repository excluding dependencies. Images and othe
 
 ## Which technologies are in use here?
 
-This project runs Node on the backend with various npm dependencies such as Express and nodemon
+This project runs Node on the backend with various npm dependencies such as Express
 
 ### Meanwhile, on the frontend...
 
@@ -25,9 +25,7 @@ This project runs Node on the backend with various npm dependencies such as Expr
 - All modern/evergreen browsers
 - IE10+
 
-This project supports only IE10+ in an attempt to find vanilla JavaScript usable on the frontend without the need for libraries such as jQuery (for example, IE9 doesn't even support ``Element.classList``)
-
-Soon after IE10 is killed off officially by Microsoft (currently scheduled for [January 12, 2016](https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support)), the minimum browser required will become IE11. The hope is that eventually we can reach a state whereby only evergreen browsers are supported (Chrome, Firefox, Edge, et cetera)
+This project supports only IE11+ in an attempt to find vanilla JavaScript usable on the frontend without the need for libraries such as jQuery (for example, IE9 doesn't even support ``Element.classList`` and, further, IE10 has been officially killed off as of January 2016), though if desired these could be polyfilled fairly easily
 
 ## How do I utilise this repository?
 
