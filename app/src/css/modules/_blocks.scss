@@ -21,10 +21,11 @@
 	color: white;
 
 	@include break-tablet {
-		padding: 14rem 2rem;
+		padding: 25rem 2rem !important;
 	}
 
-	h1, h5 {
+	h1,
+	h5 {
 		font-weight: 400;
 	}
 
@@ -67,9 +68,8 @@
 }
 
 .general-block {
-	padding: 2rem;
-	background-color: $color-primary;
-	color: white;
+	padding: 5rem $site-padding;
+	// TODO bg image here
 	@extend %clearfix;
 
 	p {
@@ -86,15 +86,15 @@
 	}
 
 	form {
-		max-width: 50rem;
-		padding: 2rem;
-		border-radius: 0.5rem;
-		background: white;
-		background: linear-gradient(to bottom, white 0%, $md-grey-100 100%);
-		color: black;
-		text-align: center;
 		position: relative; // #1
 		z-index: 1; // #1
+		max-width: 50rem;
+		padding: 2rem;
+		border-radius: $site-border-radius;
+		text-align: center;
+		box-shadow: 0 0 6px 2px $md-grey-300;
+		background: linear-gradient(to bottom, $md-grey-50 0%, $md-grey-100 100%);
+		color: black;
 		transition: opacity .5s; // #2
 
 		h2 {
@@ -133,6 +133,80 @@
 	}
 }
 
+.experience-block {
+	padding: ($site-padding * 4) $site-padding;
+	color: white;
+
+	svg,
+	img {
+		max-width: 30rem;
+		max-height: 12.5rem;
+		@extend .image-restraints;
+	}
+
+	header {
+		margin: 2rem 0 1.5rem;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 1.8rem;
+
+		+ p {
+			margin-top: 1.5rem;
+		}
+
+		a {
+			text-decoration: underline;
+		}
+	}
+
+	.width-limiter {
+		max-width: 60rem;
+	}
+}
+
+.experience-block--impero {
+	background: black;
+
+	svg {
+		margin-top: -5rem;
+	}
+
+	header {
+		color: $color-impero;
+	}
+}
+
+.experience-block--perspectivepublishing {
+	background: $color-perspectivepublishing;
+
+	.experience-block__image-wrapper {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		display: inline-block;
+		margin: 2rem 0 4rem;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -1.3rem;
+			left: -2.25rem;
+			width: 15rem;
+			height: 15rem;
+			padding: 2rem;
+			border-radius: $site-border-radius;
+			background: white;
+		}
+
+		img {
+			position: relative;
+			z-index: 1;
+		}
+	}
+}
+
 .form-notice { // #4
 	display: none; // #2
 	position: relative;
@@ -141,60 +215,4 @@
 	text-align: center;
 	opacity: 0; // #2
 	transition: opacity .3s ease-in;
-}
-
-.alternating-sides-block {
-	padding: 2rem;
-}
-
-.alternating-sides-block__chunk {
-	padding: 1.5rem 0;
-	margin: 1rem auto 2.5rem;
-	border-radius: 0.5rem;
-
-	&:nth-child(2n+2) {
-		text-align: right;
-	}
-
-	@include break-desktop {
-		width: 50%;
-		margin: 2rem auto 5rem;
-		float: left;
-
-		&:nth-child(2n+1) {
-			text-align: left;
-			clear: left;
-			padding: 0 2rem 0 0;
-		}
-
-		&:nth-child(2n+2) {
-			text-align: right;
-			padding: 0 0 0 2rem;
-		}
-
-		&:last-child {
-			@extend %clearfix;
-		}
-	}
-
-	h3 {
-		margin: 1.5rem 0 0.5rem;
-		color: $color-secondary;
-
-		svg {
-			width: 2.5rem;
-			vertical-align: bottom;
-			fill: $md-grey-400;
-			transition: fill .2s;
-
-			&:hover {
-				fill: $md-grey-600;
-			}
-		}
-	}
-}
-
-.alternating-sides-block__chunk__header__link-wrapper {
-	display: inline-block;
-	margin: 0 0 0 .5rem;
 }

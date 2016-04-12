@@ -12,6 +12,12 @@
 	max-width: $max-site-width;
 }
 
+.image-restraints {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
 .anchor { // #1
 	display: block;
 	position: relative;

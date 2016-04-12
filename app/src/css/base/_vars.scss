@@ -8,9 +8,12 @@
 $min-site-width: 320px;
 $max-site-width: 1200px;
 $site-padding: 2.5rem;
+$site-border-radius: .2rem;
 
-$color-primary: #ffdd00; // Impero
-$color-secondary: #007067; // Perspective Publishing
+$color-primary: $md-blue-700;
+$color-secondary: $md-pink-400;
+$color-impero: #ffdd00;
+$color-perspectivepublishing: #007067;
 
 $font-primary: 'Open Sans';
 $font-emphasis: 'Montserrat';

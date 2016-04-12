@@ -1,0 +1,30 @@
+/**
+ * Buttons
+ */
+
+.btn {
+	padding: 1rem;
+	margin: 1.25rem 0;
+	border: 0;
+	border-radius: 0.3rem;
+	font-family: $font-emphasis;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	cursor: pointer;
+	background-color: $color-secondary;
+	color: white;
+	transition: all 150ms ease-in-out;
+
+	&:hover {
+		background-color: $color-primary;
+	}
+
+	&:focus {
+		outline: none;
+		background-color: $color-primary;
+	}
+
+	&:active {
+		transform: scale(1.03);
+	}
+}
