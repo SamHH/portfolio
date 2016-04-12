@@ -5,7 +5,6 @@
     "es6": true
   },
   "ecmaFeatures": {
-    "jsx": true,
     "modules": true
   },
   "rules": {
@@ -17,6 +16,11 @@
       2,
       "smart"
     ],
-    "space-after-keywords": 2
+    "keyword-spacing": [
+      "error", {
+        "before": true,
+        "after": true
+      }
+    ]
   }
 }

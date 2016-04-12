@@ -1,4 +1,4 @@
-import throttle from 'lodash/function/throttle'
+import throttle from 'lodash.throttle'
 
 export default {
   activated: false,
