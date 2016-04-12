@@ -1,15 +1,14 @@
 module.exports = function (req, res) {
-  const jsonfile = require('jsonfile');
-  var jsonPath = './app/data/home.json';
+  const jsonfile = require('jsonfile')
+  const jsonPath = './app/data/home.json'
+
   jsonfile.readFile(jsonPath, function (err, obj) {
     if (err) {
-      console.log(err);
-      res.redirect('/error');
-    } else {
-      // As otherwise script continues before json file has been read
-      renderPage(obj.home);
-    }
-  });
+      console.log(err)
+      res.redirect('/error')
+      // Else as otherwise script continues before json file has been read
+    } else renderPage(obj.home)
+  })
 
   function renderPage (data) {
     res.render('pages/home', {
@@ -18,6 +17,6 @@ module.exports = function (req, res) {
       expertise: data.expertise,
       projects: data.projects,
       alternateColors: data.alternateColors
-    });
+    })
   }
-};
+}

@@ -48,4 +48,4 @@ In a nutshell:
 - Try to avoid excessive indentation
 - Above all else - **consistency**
 
-With regards to JavaScript, this project adheres to the [semistandard](https://github.com/Flet/semistandard) code style. For the unfamiliar, this is identical to the [standard](https://github.com/feross/standard) code style with the addition of semi colons for improved readability and fewer edge case issues
+With regards to JavaScript, this project adheres to the [standard](https://github.com/feross/standard) code style
