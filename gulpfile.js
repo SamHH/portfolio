@@ -40,6 +40,7 @@ var plumberOptions = {
 
 // Tasks
 gulp.task('develop', ['browser-sync', 'watch'])
+gulp.task('build', ['task_css', 'task_js_transform'])
 
 gulp.task('browser-sync', ['task_css'], function () {
   browserSync({

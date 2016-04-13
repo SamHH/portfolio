@@ -6,7 +6,8 @@
   "scripts": {
     "devstart": "nodemon --use_strict app/index",
     "start": "node --use_strict app/index",
-    "develop": "gulp develop"
+    "develop": "gulp develop",
+    "build": "gulp build"
   },
   "author": "SamHH",
   "devDependencies": {

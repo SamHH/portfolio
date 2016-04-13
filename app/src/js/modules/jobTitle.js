@@ -17,4 +17,4 @@ export default {
     this.style.animation = 'none'
     this.style.cursor = 'default'
   }
-};
+}
