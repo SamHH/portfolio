@@ -6,7 +6,7 @@ My portfolio, live at: ([samhh.com](https://samhh.com))
 
 ## Which files aren't in this repository?
 
-No code is exempted from this repository excluding dependencies. Images and other assets are not present but also easily replaced or generated
+Nothing is exempted from this repository excluding dependencies
 
 ## Which technologies are in use here?
 

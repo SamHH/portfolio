@@ -14,6 +14,7 @@ html {
 	color: $md-grey-900;
 	cursor: default;
 	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
 }
 
 *, *:before, *:after {
