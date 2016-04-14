@@ -1,14 +1,15 @@
 import throttle from 'lodash.throttle'
 
 export default {
+  throttleCheckSpeedInSeconds: .25,
   activeTabClassName: 'active',
   init() {
     this.cacheDom()
     this.checkCompat()
   },
   cacheDom() {
-    this.nav = document.querySelector('#jsNav')
-    this.fold = document.querySelector('#jsFold')
+    this.nav = document.querySelector('.navbar')
+    this.fold = document.querySelector('.landing-block__title')
     this.anchors = document.querySelectorAll('.anchor')
   },
   checkCompat() {
@@ -37,7 +38,7 @@ export default {
     document.addEventListener('scroll', throttle(function () { // Throttle prevents these functions from running more often than the time specified in ms
       this.updateHeaderActiveState()
       this.checkScrollPosRelToAnchors()
-    }.bind(this), 500))
+    }.bind(this), this.throttleCheckSpeedInSeconds * 1000))
   },
   setNavFixed() {
     this.nav.style.position = 'fixed'
@@ -55,7 +56,7 @@ export default {
     }
   },
   checkScrollPosRelToAnchors() {
-    let furthest = null
+    let furthest
 
     // If at end of document, use last anchor (as good chance last anchor not big enough to get triggered otherwise)
     if (window.pageYOffset === document.body.clientHeight - window.innerHeight) furthest = this.anchors.length - 1

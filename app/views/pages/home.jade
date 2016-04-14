@@ -3,7 +3,7 @@ extend ../layout
 append body
   a.anchor(name='home')
   header.landing-block
-    section.landing-block__title#jsFold
+    section.landing-block__title
       .width-limiter
         h5 The portfolio of
         h1 Sam A. Horvath-Hunt
@@ -36,7 +36,7 @@ append body
         p I also began to take a larger role with regards to the backend (PHP, MySQL) whilst rewriting the internal company CMS from scratch; converging a few dozen separate but identical CMS'​ into one unified, simpler, faster experience.
 
     a.anchor(name='contact')
-    section.general-block#jsFormContainer
+    section.form-block#jsFormContainer
       form#jsForm(action='/send-email', method='POST')
         h2 Get in touch
         label(for='name') Name

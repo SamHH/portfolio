@@ -2,10 +2,6 @@
  * Nav
  */
 
-#jsFold {
-	padding-top: 20rem;
-}
-
 .navbar {
 	width: 100%;
 	top: 0;
@@ -17,16 +13,8 @@
 	@extend %clearfix;
 
 	&.active {
-		background-color: white;
-		border-bottom: 0.1rem solid $md-grey-200;
-
-		li {
-			color: initial;
-		}
-
-		.navbar__social svg {
-			fill: black;
-		}
+		background: hsla(0, 0, 0, .8);
+		border-bottom: 0.1rem solid $md-grey-900;
 	}
 }
 
@@ -34,7 +22,7 @@ $navItemSideMargin: 0.5rem;
 .navbar__list {
 	list-style-type: none;
 
-	@include break-tablet {
+	@include breakpoint($tablet) {
 		float: left;
 	}
 
@@ -48,7 +36,7 @@ $navItemSideMargin: 0.5rem;
 		color: white;
 		position: relative;
 
-		@include break-tablet {
+		@include breakpoint($tablet) {
 			width: auto;
 		}
 
@@ -65,12 +53,12 @@ $navItemSideMargin: 0.5rem;
 
 		&:hover:after {
 			transform: scaleX(1);
-			background-color: $color-secondary;
+			background: $color-impero;
 		}
 
 		&.active:after {
 			transform: scaleX(1);
-			background-color: $color-primary;
+			background: $color-impero;
 		}
 	}
 }
@@ -79,7 +67,7 @@ $navItemSideMargin: 0.5rem;
 	display: none;
 	float: right;
 
-	@include break-tablet {
+	@include breakpoint($tablet) {
 		display: inline;
 	}
 

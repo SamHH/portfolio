@@ -4,10 +4,10 @@
 
 // Sass/SCSS dependencies
 @import '../../../node_modules/material-colors/dist/colors.scss';
+@import '../../../node_modules/breakpoint-sass/stylesheets/breakpoint';
 
 // Everything else
 @import 'base/vars';
-@import 'base/mixins';
 @import 'base/placeholders';
 @import 'base/utilities';
 @import 'base/typography';

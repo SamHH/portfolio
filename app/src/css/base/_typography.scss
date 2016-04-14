@@ -16,7 +16,7 @@ html {
 		'Lucida Grande',
 		sans-serif;
 
-	@include break-desktop {
+	@include breakpoint($desktop) {
 		font-size: 70%;
 	}
 }

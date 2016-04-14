@@ -11,17 +11,17 @@
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	cursor: pointer;
-	background-color: $color-secondary;
+	background: $color-perspectivepublishing;
 	color: white;
 	transition: all 150ms ease-in-out;
 
 	&:hover {
-		background-color: $color-primary;
+		background: lighten($color-perspectivepublishing, 3%);
 	}
 
 	&:focus {
 		outline: none;
-		background-color: $color-primary;
+		background: lighten($color-perspectivepublishing, 3%);
 	}
 
 	&:active {

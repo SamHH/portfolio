@@ -21,8 +21,8 @@
 	text-align: center;
 	color: white;
 
-	@include break-tablet {
-		padding: 25rem 2rem !important;
+	@include breakpoint($tablet) {
+		padding: 25rem 2rem;
 	}
 
 	h1,
@@ -64,73 +64,7 @@
 		height: 0.2rem;
 		margin: 2.5rem auto 0;
 		border: 0;
-		background-color: white;
-	}
-}
-
-.general-block {
-	padding: 5rem $site-padding;
-	// TODO bg image here
-	@extend %clearfix;
-
-	p {
-		display: inline-block;
-		background-color: darken($color-primary, 7.5%);
-		color: $md-grey-300;
-		padding: 0.5rem 1.5rem;
-		margin: 1rem 0 2.5rem;
-		border-radius: 0.8rem 0 0.8rem 0;
-
-		a {
-			color: $md-cyan-100;
-		}
-	}
-
-	form {
-		position: relative; // #1
-		z-index: 1; // #1
-		max-width: 50rem;
-		padding: 2rem;
-		border-radius: $site-border-radius;
-		text-align: center;
-		box-shadow: 0 0 6px 2px $md-grey-300;
-		background: linear-gradient(to bottom, $md-grey-50 0%, $md-grey-100 100%);
-		color: black;
-		transition: opacity .5s; // #2
-
-		h2 {
-			margin-bottom: 2rem;
-		}
-
-		label {
-			float: left;
-			margin: 1rem 0;
-			font-family: $font-emphasis;
-			font-size: 1.25rem;
-			text-transform: uppercase;
-		}
-
-		input, textarea {
-			width: 100%;
-			display: block;
-			margin: 1.5rem 0;
-			padding: 0.5rem 1rem;
-			border-radius: 0.2rem;
-			border: 1px solid $md-grey-200;
-			box-shadow: 0 1px 5px $md-grey-200;
-			font-size: 1.75rem;
-			transition: background-color .2s;
-
-			&:focus {
-				outline: none;
-				background-color: $md-grey-50;
-			}
-		}
-
-		textarea {
-			max-width: 100%; // #3
-			min-height: 15rem;
-		}
+		background: white;
 	}
 }
 
@@ -204,6 +138,58 @@
 		img {
 			position: relative;
 			z-index: 1;
+		}
+	}
+}
+
+.form-block {
+	padding: 5rem $site-padding;
+
+	form {
+		position: relative; // #1
+		z-index: 1; // #1
+		max-width: 50rem;
+		padding: 2rem;
+		border-radius: $site-border-radius;
+		text-align: center;
+		box-shadow: 0 0 6px 2px $md-grey-300;
+		background: linear-gradient(to bottom, $md-grey-50 0%, $md-grey-100 100%);
+		color: black;
+		transition: opacity .5s; // #2
+
+		h2 {
+			margin-bottom: 2rem;
+		}
+
+		label {
+			float: left;
+			margin: 1rem 0;
+			font-family: $font-emphasis;
+			font-size: 1.25rem;
+			text-transform: uppercase;
+		}
+
+		input, textarea {
+			width: 100%;
+			display: block;
+			margin: 1.5rem 0;
+			padding: 0.5rem 1rem;
+			border-radius: 0.2rem;
+			border: 1px solid $md-grey-200;
+			box-shadow: 0 1px 5px $md-grey-200;
+			font-size: 1.75rem;
+			background: $md-grey-50;
+			transition: background-color .2s;
+
+			&:focus {
+				outline: none;
+				background: white;
+			}
+		}
+
+		textarea {
+			max-width: 100%; // #3
+			min-height: 15rem;
 		}
 	}
 }

@@ -40,11 +40,11 @@ ul {
 }
 
 ::selection { // #1
-	background-color: $md-grey-800;
+	background: $md-grey-800;
 	color: white;
 }
 
 ::-moz-selection { // #1
-	background-color: $md-grey-800;
+	background: $md-grey-800;
 	color: white;
 }
