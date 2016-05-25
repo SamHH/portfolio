@@ -3,6 +3,10 @@ extend ../layout
 append body
   a.anchor(name='home')
   header.landing-block
+    .landing-block__background-video
+      video(autoplay, loop, muted, poster='/public/vids/landing.jpg')
+        source(type='video/webm', src='/public/vids/landing.webm')
+        source(type='video/mp4', src='/public/vids/landing.mp4')
     section.landing-block__title
       .width-limiter
         h5 The portfolio of
@@ -15,21 +19,31 @@ append body
 
     section.experience-block.experience-block--impero
       .width-limiter
-        a(href='http://www.weareimpero.com', target='_blank')
-          include ../../public/img/impero.svg
         header
           h2 Junior Frontend Web Developer
+          a(href='http://www.weareimpero.com', target='_blank'): h4 Impero
           time December 2015 - Present
-        p My work here includes building the frontend of campaign websites for large brands from scratch, with a little Node backend thrown in too. I also work alongside other developers to maintain large websites for brands such as Beefeater, Campo Viejo, Jacob's Creek, Pernod Ricard Winemakers, Lindt and many more. I've also heavily contributed towards fun side-project microsites such as <a href="//camera-on-camera-off.wtf/" target="_blank"> Camera-On/Camera-Off</a>.
+        p My work here includes building the frontend of campaign websites for large brands from scratch, with a little Node backend thrown in too. I also work alongside other developers to maintain large websites for brands such as Beefeater, Campo Viejo, Jacob's Creek, Pernod Ricard Winemakers, Lindt and many more. I've also heavily contributed towards fun side-project microsites such as <a href="//camera-on-camera-off.wtf/" target="_blank"> Camera-On/Camera-Off</a>. In mid-2016 I almost single-handedly coded our new company website that you can view at <a href="//weareimpero.com" target="_blank">weareimpero.com</a>.
         p My experience here so far has been heavily focused on enhancing my understanding of core JavaScript, sans helpers such as jQuery. My knowledge up to, including and beyond ES2015 is now very strong, primarily on the frontend but also on the backend with Node.
+
+    .width-limiter
+      .css-device.css-device--browser(data-url='weareimpero.com')
+        img.css-device__image(src='/public/img/impero-desktop.jpg')
+      .css-mobile-devices-row
+        .css-device.css-device--mobile(data-url='Promotion')
+          img.css-device__image(src='/public/img/campoviejo-mobile.jpg')
+        .css-device.css-device--mobile(data-url='weareimpero.com')
+          img.css-device__image(src='/public/img/impero-mobile.jpg')
+        .css-device.css-device--mobile(data-url='perspectivepublishing.com')
+          img.css-device__image(src='/public/img/perspectivepublishing-mobile.jpg')
+      .css-device.css-device--browser(data-url='beefeatergin.com')
+        img.css-device__image(src='/public/img/beefeater-desktop.jpg')
 
     section.experience-block.experience-block--perspectivepublishing
       .width-limiter
-        a(href='http://www.perspectivepublishing.com', target='_blank')
-          .experience-block__image-wrapper
-            img(src='/public/img/perspectivepublishing.png')
         header
           h2 Full-Stack Web Developer & Designer
+          a(href='http://www.perspectivepublishing.com', target='_blank'): h4 Perspective Publishing
           time March 2014 - December 2015
         p After an initial, highly successful apprenticeship I quickly began designing and developing the front-end of the websites at Perspective Publishing. After creating a solid initial design I would code it in its entirety myself from scratch in HTML, CSS (Sass) and JS (vanilla + jQuery). All of my code was created with an eye to reuse and modularity.
         p I spearheaded the change from simple FTP uploads to a version control system (Git on GitHub), with various tasks accomplished by Gulp during development.
@@ -37,15 +51,16 @@ append body
 
     a.anchor(name='contact')
     section.form-block#jsFormContainer
-      form#jsForm(action='/send-email', method='POST')
-        h2 Get in touch
-        label(for='name') Name
-        input(type='text', name='name', required)
-        label(for='email') Email address (optional)
-        input(type='email', name='email')
-        label(for='subject') Subject
-        input(type='text', name='subject', required)
-        label(for='message') Message
-        textarea(name='message', required)
-        button.btn#jsFormButton(type='submit') Send
-      .form-notice#jsFormNotice Thanks for getting in touch. I'll get back to you as soon as I can!
+      .width-limiter
+        form#jsForm(action='/send-email', method='POST')
+          h2.typo-emphasis Get in touch
+          label(for='name') Name
+          input(type='text', name='name', required)
+          label(for='email') Email address (optional)
+          input(type='email', name='email')
+          label(for='subject') Subject
+          input(type='text', name='subject', required)
+          label(for='message') Message
+          textarea(name='message', required)
+          button.btn#jsFormButton(type='submit') Send
+        .form-notice#jsFormNotice Thanks for getting in touch. I'll get back to you as soon as I can!

@@ -3,6 +3,7 @@
  *
  * #1: Can't be css comma'd due to browsers dropping the entire thing
        upon finding something they don't understand (e.g. prefix)
+ * #2: For the bubbles
  */
 
 * {
@@ -15,6 +16,7 @@ html {
 	cursor: default;
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
+	position: relative; // #2
 }
 
 *, *:before, *:after {

@@ -1,15 +1,8 @@
 /**
  * Sass placeholders
- *
- * #1: Remove the ability to highlight stuff
- * #2: From: http://cssmojo.com/latest_new_clearfix_so_far/
  */
 
-%no-select { // #1
-	user-select: none;
-}
-
-%clearfix { // #2
+%clearfix {
 	&:after {
 		content: "";
 		display: table;

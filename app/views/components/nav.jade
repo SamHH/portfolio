@@ -1,14 +1,5 @@
 nav.navbar
   .width-limiter
-    ul.navbar__list
-      a(href='#home')
-        li Home
-      a(href='#experience')
-        li Experience
-      a(href='#projects')
-        li Projects
-      a(href='#contact')
-        li Contact
     .navbar__social
       a(href='https://github.com/samhh/portfolio', target='_blank', title='GitHub').github
         include ../../public/img/github.svg
@@ -16,3 +7,6 @@ nav.navbar
         include ../../public/img/stackoverflow.svg
       a(href='https://linkedin.com/in/samhh', target='_blank', title='LinkedIn').linkedin
         include ../../public/img/linkedin.svg
+    ul.navbar__list
+      a(href='#contact')
+        button(type='button').btn Get in touch

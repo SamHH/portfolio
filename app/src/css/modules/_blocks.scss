@@ -10,14 +10,32 @@
  */
 
 .landing-block {
-	background-image: url('/public/img/landing.jpg');
-	background-size: cover;
-	background-position: center bottom;
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
 	text-transform: uppercase;
 }
 
+.landing-block__background-video {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	z-index: -1;
+	filter: brightness(.75) hue-rotate(135deg);
+	background: black;
+
+	video {
+		min-width: 100vw;
+		min-height: 100vh;
+	}
+}
+
 .landing-block__title {
-	padding: 10rem 2rem;
+	width: 100%;
+	padding: 2rem;
 	text-align: center;
 	color: white;
 
@@ -68,20 +86,37 @@
 	}
 }
 
-.experience-block {
-	padding: ($site-padding * 4) $site-padding;
-	color: white;
+.landing-block::after {
+	content: '';
+	position: absolute;
+	bottom: -20rem;
+	transform: rotate(-5deg);
+	left: -150vw;
+	width: 300vw;
+	height: 20rem;
+	background: white;
+}
 
-	svg,
-	img {
-		max-width: 30rem;
-		max-height: 12.5rem;
-		@extend .image-restraints;
-	}
+.experience-block {
+	padding: 10rem 0;
 
 	header {
 		margin: 2rem 0 1.5rem;
 		text-transform: uppercase;
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		h4 {
+			font-size: 1.9rem;
+			font-weight: bold;
+		}
+
+		time {
+			font-size: 1.5rem;
+			text-transform: none;
+		}
 	}
 
 	p {
@@ -95,55 +130,22 @@
 			text-decoration: underline;
 		}
 	}
-
-	.width-limiter {
-		max-width: 60rem;
-	}
 }
 
-.experience-block--impero {
-	background: black;
-
-	svg {
-		margin-top: -5rem;
-	}
-
-	header {
-		color: $color-impero;
-	}
-}
-
-.experience-block--perspectivepublishing {
-	background: $color-perspectivepublishing;
-
-	.experience-block__image-wrapper {
-		position: relative;
-		left: 50%;
-		transform: translateX(-50%);
-		display: inline-block;
-		margin: 2rem 0 4rem;
-
-		&::before {
-			content: '';
-			position: absolute;
-			top: -1.3rem;
-			left: -2.25rem;
-			width: 15rem;
-			height: 15rem;
-			padding: 2rem;
-			border-radius: $site-border-radius;
-			background: white;
-		}
-
-		img {
-			position: relative;
-			z-index: 1;
-		}
-	}
-}
+// .experience-block--impero {
+// 	background: black;
+//
+// 	header {
+// 		color: $color-impero;
+// 	}
+// }
+//
+// .experience-block--perspectivepublishing {
+// 	background: $color-perspectivepublishing;
+// }
 
 .form-block {
-	padding: 5rem $site-padding;
+	padding: 5rem 0;
 
 	form {
 		position: relative; // #1

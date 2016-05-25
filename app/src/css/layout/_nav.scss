@@ -4,75 +4,26 @@
 
 .navbar {
 	width: 100%;
+	position: absolute;
 	top: 0;
-	padding: 0 1rem;
 	z-index: 10;
+	padding: 2rem 2rem;
 	font-size: 1.35rem;
-	transition: all .2s ease-in-out;
-	text-transform: uppercase;
-	@extend %clearfix;
 
-	&.active {
-		background: hsla(0, 0, 0, .8);
-		border-bottom: 0.1rem solid $md-grey-900;
-	}
-}
+	.width-limiter {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-$navItemSideMargin: 0.5rem;
-.navbar__list {
-	list-style-type: none;
-
-	@include breakpoint($tablet) {
-		float: left;
-	}
-
-	li {
-		width: calc(50% - (#{$navItemSideMargin} * 2));
-		padding: 1rem 1rem 1.2rem;
-		margin: 0.8rem $navItemSideMargin;
-		float: left;
-		text-align: center;
-		font-family: $font-emphasis;
-		color: white;
-		position: relative;
-
-		@include breakpoint($tablet) {
-			width: auto;
-		}
-
-		&:after {
-			content: "";
-			width: 100%;
-			height: 0.2rem;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			transform: scaleX(0);
-			transition: all 200ms ease-in-out;
-		}
-
-		&:hover:after {
-			transform: scaleX(1);
-			background: $color-impero;
-		}
-
-		&.active:after {
-			transform: scaleX(1);
-			background: $color-impero;
+		> * {
+			margin: 0;
 		}
 	}
 }
 
 .navbar__social {
-	display: none;
-	float: right;
-
-	@include breakpoint($tablet) {
-		display: inline;
-	}
-
 	.github svg:hover {
-		fill: #aaa;
+		fill: white;
 	}
 
 	.stackoverflow svg:hover {
@@ -84,13 +35,18 @@ $navItemSideMargin: 0.5rem;
 	}
 
 	svg {
-		width: 3.2rem;
-		padding: 1.4rem 0.5rem;
-		fill: white;
-		transition: all .3s;
+		height: 2.2rem;
+		padding: 0 .5rem;
+		fill: #eee;
+		transition: fill .2s;
+	}
+}
 
-		&:hover {
-			transform: scale(1.15);
-		}
+$navItemSideMargin: 0.5rem;
+.navbar__list {
+	list-style-type: none;
+
+	.btn {
+		margin: 0;
 	}
 }

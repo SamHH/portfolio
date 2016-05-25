@@ -1,5 +1,5 @@
 import nav from './modules/nav'
-nav.init()
+// nav.init()
 import jobTitle from './modules/jobTitle'
 jobTitle.init()
 import bubbles from './modules/bubbles'

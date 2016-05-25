@@ -3,28 +3,28 @@
  */
 
 .btn {
-	padding: 1rem;
+	padding: 1rem 1.5rem;
 	margin: 1.25rem 0;
 	border: 0;
 	border-radius: 0.3rem;
 	font-family: $font-emphasis;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	text-transform: uppercase;
 	cursor: pointer;
-	background: $color-perspectivepublishing;
+	background: lighten($color-primary, 8%);
 	color: white;
 	transition: all 150ms ease-in-out;
 
 	&:hover {
-		background: lighten($color-perspectivepublishing, 3%);
+		background: lighten($color-primary, 12%);
 	}
 
 	&:focus {
 		outline: none;
-		background: lighten($color-perspectivepublishing, 3%);
+		background: lighten($color-primary, 12%);
 	}
 
 	&:active {
-		transform: scale(1.03);
+		transform: translateY(.3rem);
 	}
 }

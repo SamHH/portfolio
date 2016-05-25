@@ -2,11 +2,11 @@ import throttle from 'lodash.throttle'
 
 export default {
   activated: false,
-  numBubbles: 40,
+  numBubbles: window.innerWidth / 30,
   minimumBubbleSizeInPx: 3,
   maximumBubbleSizeInPx: 10,
-  bubbleMinStartPositionPercent: 30,
-  bubbleMaxStartPositionPercent: 70,
+  bubbleMinStartPositionPercent: 3,
+  bubbleMaxStartPositionPercent: 97,
   bubbleMinAnimateTimeInSeconds: 10,
   bubbleMaxAnimateTimeInSeconds: 25,
   init() {
