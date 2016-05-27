@@ -4,6 +4,9 @@ Site (you're already here!): https://samhh.com
 Source: https://github.com/SamHH/portfolio
 Location: London, UK
 
+/* Landing video */
+- Hello World by Coverr
+
 /* SVG icon credits from the Noun Project (thenounproject.com) */
 - Correct Answer by Arthur Shlain (StackOverflow)
 - External Link by Hello Many
@@ -11,6 +14,5 @@ Location: London, UK
 - pull request by Richard Slater (GitHub)
 
 /*  Misc thanks */
-- Whoever made the background in use on the landing page **will find this at a later date
 - My employers Impero for their Skeleton repo that was the basis for my switch to Node, Browserify and more
 - Everyone who contributed towards all the tools and standards in use

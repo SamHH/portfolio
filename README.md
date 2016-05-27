@@ -23,9 +23,8 @@ This project runs Node on the backend with various npm dependencies such as Expr
 ## Which browsers are supported?
 
 - All modern/evergreen browsers
-- IE10+
 
-This project supports only IE11+ in an attempt to find vanilla JavaScript usable on the frontend without the need for libraries such as jQuery (for example, IE9 doesn't even support ``Element.classList`` and, further, IE10 has been officially killed off as of January 2016), though if desired these could be polyfilled fairly easily
+Older browsers such as Internet Explorer are not explicitly supported for the sake of me being able to explore newer tech in development
 
 ## How do I utilise this repository?
 
