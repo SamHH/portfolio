@@ -37,6 +37,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "Demo": "github:callmenick/CSS-Device-Mockups",
     "dotenv": "^2.0.0",
     "express": "^4.13.3",
     "jade": "^1.11.0",

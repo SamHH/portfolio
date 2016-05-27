@@ -25,7 +25,17 @@
 	left: 50%;
 	z-index: -1;
 	filter: brightness(.75) hue-rotate(135deg);
+	animation: landingVideoHueRotate 60s ease infinite;
 	background: black;
+
+	@keyframes landingVideoHueRotate {
+		0%, 100% {
+			filter: hue-rotate(135deg);
+		}
+		50% {
+			filter: hue-rotate(315deg);
+		}
+	}
 
 	video {
 		min-width: 100vw;
@@ -60,20 +70,6 @@
 		}
 		&:nth-child(3) {
 			color: $md-grey-500;
-
-			#jsJobTitleText {
-				cursor: pointer;
-				animation: colorHighlight 3s ease infinite;
-
-				@keyframes colorHighlight {
-					0%, 100% {
-						color: inherit;
-					}
-					50% {
-						color: $md-grey-400;
-					}
-				}
-			}
 		}
 	}
 
@@ -83,6 +79,20 @@
 		margin: 2.5rem auto 0;
 		border: 0;
 		background: white;
+	}
+}
+
+.js-job-title {
+	cursor: pointer;
+	animation: colorHighlight 3s ease infinite;
+
+	@keyframes colorHighlight {
+		0%, 100% {
+			color: inherit;
+		}
+		50% {
+			color: $md-grey-400;
+		}
 	}
 }
 
@@ -132,17 +142,15 @@
 	}
 }
 
-// .experience-block--impero {
-// 	background: black;
-//
-// 	header {
-// 		color: $color-impero;
-// 	}
-// }
-//
-// .experience-block--perspectivepublishing {
-// 	background: $color-perspectivepublishing;
-// }
+.css-mobile-devices-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 10rem 0;
+
+  .css-device + .css-device {
+    margin-left: 1.5rem;
+  }
+}
 
 .form-block {
 	padding: 5rem 0;

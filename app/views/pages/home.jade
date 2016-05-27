@@ -12,12 +12,12 @@ append body
         h5 The portfolio of
         h1 Sam A. Horvath-Hunt
         h5 A&nbsp;
-          span(id="jsJobTitleText") web developer
+          span(class="js-job-title") web developer
           | &nbsp;from London, UK
   main
     a.anchor(name='experience')
 
-    section.experience-block.experience-block--impero
+    section.experience-block
       .width-limiter
         header
           h2 Junior Frontend Web Developer
@@ -39,7 +39,7 @@ append body
       .css-device.css-device--browser(data-url='beefeatergin.com')
         img.css-device__image(src='/public/img/beefeater-desktop.jpg')
 
-    section.experience-block.experience-block--perspectivepublishing
+    section.experience-block
       .width-limiter
         header
           h2 Full-Stack Web Developer & Designer
@@ -50,9 +50,9 @@ append body
         p I also began to take a larger role with regards to the backend (PHP, MySQL) whilst rewriting the internal company CMS from scratch; converging a few dozen separate but identical CMS'​ into one unified, simpler, faster experience.
 
     a.anchor(name='contact')
-    section.form-block#jsFormContainer
+    section.form-block.js-form-container
       .width-limiter
-        form#jsForm(action='/send-email', method='POST')
+        form.js-form(action='/send-email', method='POST')
           h2.typo-emphasis Get in touch
           label(for='name') Name
           input(type='text', name='name', required)
@@ -62,5 +62,5 @@ append body
           input(type='text', name='subject', required)
           label(for='message') Message
           textarea(name='message', required)
-          button.btn#jsFormButton(type='submit') Send
-        .form-notice#jsFormNotice Thanks for getting in touch. I'll get back to you as soon as I can!
+          button.btn.js-form-button(type='submit') Send
+        .form-notice.js-form-notice Thanks for getting in touch. I'll get back to you as soon as I can!

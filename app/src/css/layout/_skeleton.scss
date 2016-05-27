@@ -17,6 +17,7 @@ html {
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
 	position: relative; // #2
+	overflow-x: hidden; // #2
 }
 
 *, *:before, *:after {

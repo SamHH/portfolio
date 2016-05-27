@@ -4,7 +4,7 @@ export default {
     this.bindEvents()
   },
   cacheDom() {
-    this.target = document.getElementById('jsJobTitleText')
+    this.target = document.querySelector('.js-job-title')
   },
   bindEvents() {
     // Only run on pages with this element

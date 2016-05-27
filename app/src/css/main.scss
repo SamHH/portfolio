@@ -5,6 +5,7 @@
 // Sass/SCSS dependencies
 @import '../../../node_modules/material-colors/dist/colors.scss';
 @import '../../../node_modules/breakpoint-sass/stylesheets/breakpoint';
+@import '../../../node_modules/Demo/sass/component';
 
 // Everything else
 @import 'base/vars';
@@ -14,11 +15,9 @@
 
 @import 'layout/skeleton';
 @import 'layout/nav';
-@import 'layout/main';
 @import 'layout/footer';
 
 @import 'modules/blocks';
 @import 'modules/buttons';
 @import 'modules/bubbles';
-@import 'modules/devices';
 @import 'modules/loaders';

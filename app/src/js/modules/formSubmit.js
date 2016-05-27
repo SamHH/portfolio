@@ -8,11 +8,11 @@ export default {
     this.disallowSubmitIfTooQuick()
   },
   cacheDom() {
-    this.formContainer = document.querySelector('#jsFormContainer');
-    this.form = document.querySelector('#jsForm');
-    this.formButton = document.querySelector('#jsFormButton');
-    this.formNotice = document.querySelector('#jsFormNotice');
-    this.captchaResponse = document.querySelector('#g-recaptcha-response');
+    this.formContainer = document.querySelector('.js-form-container')
+    this.form = document.querySelector('.js-form')
+    this.formButton = document.querySelector('.js-form-button')
+    this.formNotice = document.querySelector('.js-form-notice')
+    this.captchaResponse = document.querySelector('#g-recaptcha-response')
   },
   bindEvents() {
     // Only run on pages with form element

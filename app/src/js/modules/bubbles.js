@@ -14,7 +14,7 @@ export default {
     this.bindEvents()
   },
   cacheDom() {
-    this.bubblesContainer = document.querySelector('#jsBubbles')
+    this.bubblesContainer = document.querySelector('.js-bubbles')
   },
   bindEvents() {
     // Only run on pages with this element
