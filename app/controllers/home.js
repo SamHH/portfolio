@@ -1,6 +1,6 @@
 module.exports = function (req, res) {
   res.render('pages/home', {
     devenv: process.env.DEV_ENV,
-    title: 'Home'
+    title: 'Sam A. Horvath-Hunt\'s Portfolio'
   })
 }

@@ -4,9 +4,11 @@ html(lang='en')
     include components/head
 
   body
-    include components/nav
+    block nav
+      include components/nav
 
     block body
 
-    include components/footer
+    block footer
+      include components/footer
     include components/scripts

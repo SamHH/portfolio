@@ -1,0 +1,10 @@
+extend ../layout
+
+block nav
+block footer
+
+append body
+  main.full-page-message
+    div
+      h1= title
+      p!= messageHTML
