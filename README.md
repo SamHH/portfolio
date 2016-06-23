@@ -42,7 +42,6 @@ This project largely follows the CSS guidelines you can view here: [cssguidelin.
 In a nutshell:
 
 - BEM (Block, Element, Modifier) class naming convention
-- Attempt to restrict lines to 80 characters wide
 - Modular incl/ file structure
 - Try to avoid excessive indentation
 - Above all else - **consistency**
