@@ -1,9 +1,5 @@
 # SamHH | Portfolio
 
-My portfolio, live at: ([samhh.com](https://samhh.com))
-
----
-
 ## Which files aren't in this repository?
 
 Nothing is exempted from this repository excluding dependencies
